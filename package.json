@@ -2,7 +2,7 @@
   "name": "evaluation-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+ 
   "dependencies": {
     "@types/react": "^18.2.37",
     "axios": "^0.21.1",
