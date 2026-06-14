@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "yourgmail@gmail.com",       // your gmail
-        pass: "your_app_password"          // gmail app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
@@ -109,6 +109,8 @@ app.post("/send-appointment", async (req, res) => {
    SERVER START
 ========================================= */
 
-app.listen(5000, () => {
-    console.log("Server running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
