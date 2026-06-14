@@ -1,0 +1,584 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
+const Landing = () => {
+    return (
+        <section>
+            <Helmet>
+                <title>Evaluationz: Industries</title>
+                {(window.location.pathname === '/industries') &&
+                    <script src="//evaluationz.mykampaign.com/focus/3.js" type="text/javascript" charset="utf-8"
+                            async="async"></script>
+                }
+                <meta name="description" content="See the various industries and spaces Evaluationz brings security to through verification" />
+                <meta name="keywords" content="address verification, criminal verification, drug panel testing, employment verification, education verification, employee verification, user verification, vendor verification, Identity check, Social Media Check, Reference check, Drug test, Digital verification, passport verification, credit check, API Integration, Reduced TAT, Real time verification, verification Specialist, NASCOM empanelled, credit score check, Evaluationz, Evaluationz India Pvt. Ltd., Verification India, AI, Artificial Intelligence, BlueG, Coporate verification, IT Verification, Ites Verification, Banking and Financial Services Industry Verification, Automative verification, eCommerce verification, healthcare verification, rental verificaion, matrimonial verification, hyperlocal verification, blue collar verification, white collar verification"/>
+                <meta property="og:description" content="See the various industries and spaces Evaluationz brings security to through verification" />
+                <meta property="og:url" content="https://www.evaluationz.com/industries" />
+                <meta property="og:image" content="https://www.evaluationz.com/images/favicon.jpg" />
+                <meta property="og:image:secure_url" content="https://www.evaluationz.com/images/favicon.jpg" />
+                <meta name="twitter:image" content="https://www.evaluationz.com/images/favicon.jpg" />
+            </Helmet>
+
+            <div className="about-section bg-white py-4 mt-5">
+                <div className="container pt-5">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-left text-center">
+                                <img src="images/industries/image-1.jpg"
+                                     alt="shape"
+                                     className="blue-image-left shadow-2xl"/>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h1 className="c-blue font-weight-bolder">Many verifications. One goal. Authenticity</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-black pt-5 pb-4">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-12">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <p className="text-white">One can never be too careful. There is no denying the upswing in frauds and misrepresentation across more and more facets
+                                        of modern life. This is probably why verification has expanded from the traditional fields like employee background
+                                        verification. Today, Evaluationz offers a gamut of verification services that cover employees and users.</p>
+
+                                    <p className="text-white">Our proprietary BlueG platform built on Artificial Intelligence and using componentized features makes comprehensive and
+                                        accurate verification easy and instant. Evaluationz enables verification across use cases that span organizations, individuals
+                                        and business entities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-white py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h2 className="c-blue">Corporates</h2>
+                                </div>
+                                <div className="about-content">
+                                    <p className="text-black">The most widespread use of verification has traditionally
+                                        been employee verification for corporates, specially in
+                                        industries such as IT, ITeS, Banking, Financial Services,
+                                        Insurance, Automotive, eCommerce and Healthcare.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-right text-center">
+                                <img src="images/industries/image-2.jpg"
+                                     alt="shape"
+                                     className="blue-image-right shadow-2xl"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-black py-5">
+                <div className="container">
+                    <h3 className="c-red">
+                        Verifications:
+                    </h3>
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-1.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Identity Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-2.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Address Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-3.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Employment Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-4.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Education Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-5.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Criminal Record Check
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-6.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Drug Tests
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row mt-2">
+                        <div className="col-12">
+                            <Link to="/corporate" target="_blank" className="btn btn-primary btn-red float-right">Read More</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-white py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-left text-center">
+                                <img src="images/industries/image-3.jpg"
+                                     alt="shape"
+                                     className="blue-image-left shadow-2xl"/>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h2 className="c-blue">Ecommerce Companies</h2>
+                                </div>
+                                <div className="about-content">
+                                    <p className="text-black">The credibility of eCommerce companies is built on (and potentially tarnished by) sellers on
+                                        one hand and delivery agents on the other. Verification can help weed out disreputable sellers or fly-by-night operators
+                                        who may offer a negative experience. Background verification can also help filter potentially troublesome delivery agents,
+                                        as well as add traceability in the event of an incident. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-black py-5">
+                <div className="container">
+                    <h3 className="c-red">
+                        Verifications:
+                    </h3>
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-1.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Identity Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-2.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Address Verification
+                            </span>
+                        </div>
+
+                        {/* <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-4.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Education Verification
+                            </span>
+                        </div> */}
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-7.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Driving Licence Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-8.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Legal Verification
+                            </span>
+                        </div>
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-6.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Drug Tests
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* <div className="row align-items-center mt-4">
+
+                    </div> */}
+
+                    <div className="row mt-2">
+                        <div className="col-12">
+                            <Link to="/ecommerce"
+                                  target="_blank"
+                                  className="btn btn-primary btn-red float-right">
+                                Read More
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-white py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h2 className="c-blue">BFSI</h2>
+                                </div>
+                                <div className="about-content">
+                                    <p className="text-black">Banking and fintech platforms including microloans, gold loans,
+                                        chit funds nowadays offer instant signups, loans, and account opening. This requires instant
+                                        and hassle-free user e-KYC. The verifications will also need to be conducted at regular intervals
+                                        to ensure user data is up to date.</p>
+                                    <p className="text-black">Life insurance and pension schemes are preferred investment destinations for many people.
+                                        These are also areas with a very high potential for fraud. Instant e-KYC helps faster turnaround
+                                        times with life insurance and also reduces the chance of fraud by providing instantaneous liveliness checks. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-right text-center">
+                                <img src="images/industries/image-4.jpg"
+                                     alt="shape"
+                                     className="blue-image-right shadow-2xl"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-black py-5">
+                <div className="container">
+                    <h3 className="c-red">
+                        Verifications:
+                    </h3>
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-1.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Identity Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-2.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Address Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-3.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Employment Address Verification
+                            </span>
+                        </div>
+
+                        {/* <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-4.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Education Verification
+                            </span>
+                        </div> */}
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-5.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Criminal Record Check
+                            </span>
+                        </div>
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-10.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Court Record Verification
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row mt-4">
+                        <div className="col-12">
+                            <Link to="/bfsi"
+                                  target="_blank"
+                                  className="btn btn-primary btn-red float-right">
+                                Read More
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-white py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-left text-center">
+                                <img src="images/industries/image-8.jpg"
+                                     alt="shape"
+                                     className="blue-image-left shadow-2xl"/>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h2 className="c-blue">Internet Companies</h2>
+                                </div>
+                                <div className="about-content">
+                                    <p className="text-black">Whether it is edtech, hyperlocal delivery, ride hailing services,
+                                        dating, matrimonial, gaming, on-call services or rental platforms or apps, ensuring that
+                                        users and partners are verified makes it a safer, more fulfilling experience for everyone.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-black py-5">
+                <div className="container">
+                    <h3 className="c-red">
+                        Verifications:
+                    </h3>
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-1.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Identity Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-2.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Address Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-7.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Driving Licence Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-10.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Court Record Verification
+                            </span>
+                        </div>
+
+                        {/* <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-4.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Education Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-8.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                               Legal Verification
+                            </span>
+                        </div>*/}
+                    </div>
+
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-6.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Drug Tests
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row mt-2">
+                        <div className="col-12">
+                            <Link to="/internetcompanies"
+                                  target="_blank"
+                                  className="btn btn-primary btn-red float-right">
+                                Read More
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/*<div className="about-section bg-blue py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h2 className="text-white">Matrimonial Sites</h2>
+                                </div>
+                                <div className="about-content">
+                                    <p className="text-white">Thorough pre-matrimonial verification can prevent
+                                        costly mistakes - financial, emotional and reputational.
+                                        Users can decide the depth to which they want to screen
+                                        potential candidates to ensure they are making a
+                                        balanced decision.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-right text-center">
+                                <img src="images/industries/image-6.jpg" alt="shape" className="red-image-right shadow-2xl"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 className="text-white">
+                        Verifications:
+                    </h3>
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-1.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Identity Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-2.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Address Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-3.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Employment Address Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-4.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Education Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-8.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Legal Verification
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-2 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-10.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Financial Track Record Verification
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row mt-2">
+                        <div className="col-12">
+                            <Link to="/matrimonial" target="_blank" className="btn btn-primary btn-red float-right">Read More</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="about-section bg-red py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-image text-md-left text-center">
+                                <img src="images/industries/image-7.jpg" alt="shape" className="blue-image-left shadow-2xl"/>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 pb-30">
+                            <div className="about-section-item about-item-details">
+                                <div className="section-title section-title-left text-start">
+                                    <h2 className="text-white">Online Rental Companies</h2>
+                                </div>
+                                <div className="about-content">
+                                    <p className="text-white">Homeowners are naturally looking to protect their
+                                        precious asset by ensuring that they rent their
+                                        properties to trustworthy tenants. Evaluationz’
+                                        verifications can help them sleep in peace.
+                                        And verifications at regular intervals can ensure the
+                                        records are up to date.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 className="text-white">
+                        Verifications:
+                    </h3>
+                    <div className="row align-items-center mt-4">
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-1.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Identity Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-2.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Digital Address Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-8.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                               Legal Verification
+                            </span>
+                        </div>
+
+                        <div className="col-md-3 d-flex align-items-center justify-content-start">
+                            <img src="images/industries/icon-12.png" alt="shape" width="80"/>
+                            <span className="text-white ml-2">
+                                Credit Verification
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="row mt-2">
+                        <div className="col-12">
+                            <Link to="/rental" target="_blank" className="btn btn-primary btn-blue float-right">Read More</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>*/}
+        </section>
+    );
+};
+
+export default Landing;
