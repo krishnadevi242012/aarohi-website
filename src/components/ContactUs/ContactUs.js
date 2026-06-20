@@ -208,7 +208,7 @@ const ContactUs = () => {
                                 <div className="col-md-4">
                                     <div className="image-wrapper">
                                         <img
-                                            src="images/contact-us/image.jpg"
+                                            src="images/contact-us/Image.jpg"
                                             alt="contact"
                                             className="contact-image"
                                         />
