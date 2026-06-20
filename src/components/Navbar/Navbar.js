@@ -684,7 +684,7 @@ const Navbar = () => {
                         <li><Link to="/technology">DOCTORS</Link></li>
 
 
-                        <li>
+                        {/* <li>
                             <a className="nav-link dropdown-toggle">
                                 PATIENT & VISITERS
                             </a>
@@ -696,9 +696,9 @@ const Navbar = () => {
                                 <li><Link to="/case-studies">Patient Rights & Responsibility</Link></li>
                                 <li><Link to="/case-studies">Visiting Hours & Directions</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
 
-                        <li>
+                        {/* <li>
                             <a className="nav-link dropdown-toggle">
                                 INTERNATIONAL PATIENT
                             </a>
@@ -707,7 +707,7 @@ const Navbar = () => {
                                 <li><Link to="/thought-paper">THOUGHT PAPER</Link></li>
                                 <li><Link to="/case-studies">CASE STUDIES</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li><Link to="/contact">CONTACT US</Link></li>
                     </ul>
                 </div>
