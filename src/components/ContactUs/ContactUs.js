@@ -219,17 +219,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="about-section bg-black py-4">
-                <div className="container">
-                    {/* <iframe className="map"
-                        scrolling="no"
-                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=BHIVE%20Workspace%20MG%20Road+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/truck-gps/">vehicle tracking</a></iframe>*/}
-                    <div className="section-title section-title-left mb-0 text-start">
-                        {/*<h5 className="text-black font-weight-bolder">Call us at : <a href="tel:8049905616">+91 80 49905616</a></h5>*/}
-                        <h5 className="text-white font-weight-bolder mb-0">Mail us at : <a href="mailto:sales@evaluationz.com" className="c-red">sales@evaluationz.com</a></h5>
-                    </div>
-                </div>
-            </div>
+           
 
             <div className="about-section bg-white py-4">
                 <div className="container pt-5">
