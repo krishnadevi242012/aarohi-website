@@ -27,24 +27,29 @@ const Navbar = () => {
                     {/* Desktop Contact Badges */}
                     <div className="nav-contact d-none d-md-flex align-items-center gap-3">
 
-                        {/* Emergency */}
                         <a
                             href="tel:+919876543210"
                             className="contact-badge emergency-badge"
                         >
-                            Emergency
-                            <div className="fw-bold">+91 98765 43210</div>
-                        </a>
+                            <i className="mdi mdi-phone"></i>
 
-                        {/* Book Appointment */}
+                            <div>
+                                <span>EMERGENCY</span>
+                                <strong>+91 98765 43210</strong>
+                            </div>
+                        </a>
                         <a
                             href="https://wa.me/918888777666"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="contact-badge appointment-badge"
                         >
-                            Book Appointment
-                            <div className="fw-bold">+91 88887 77666</div>
+                            <i className="mdi mdi-calendar-check"></i>
+
+                            <div>
+                                <span>BOOK APPOINTMENT</span>
+                                <strong>+91 88887 77666</strong>
+                            </div>
                         </a>
 
                     </div>
@@ -75,22 +80,22 @@ const Navbar = () => {
                         {/* Action Buttons */}
                         <div className="mobile-action-buttons">
 
-                            <a
-                                href="tel:+919876543210"
-                                className="mobile-emergency-btn"
-                            >
-                                EMERGENCY
-                                <span>+91 98765 43210</span>
+                            <a href="tel:+919876543210" className="mobile-emergency-btn">
+                                <i className="mdi mdi-phone"></i>
+
+                                <div>
+                                    EMERGENCY
+                                    <span>+91 98765 43210</span>
+                                </div>
                             </a>
 
-                            <a
-                                href="https://wa.me/918888777666"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mobile-book-btn"
-                            >
-                                BOOK APPOINTMENT
-                                <span>+91 88887 77666</span>
+                            <a href="https://wa.me/918888777666" className="mobile-book-btn">
+                                <i className="mdi mdi-calendar-check"></i>
+
+                                <div>
+                                    BOOK APPOINTMENT
+                                    <span>+91 88887 77666</span>
+                                </div>
                             </a>
 
                         </div>
@@ -317,7 +322,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Urology
+                                                        Urology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -328,7 +333,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Medical Gastroenterology
+                                                        Medical Gastroenterology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -339,7 +344,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Surgical Gastroenterology
+                                                        Surgical Gastroenterology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -350,7 +355,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Paediatric Surgery
+                                                        Paediatric Surgery
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -361,7 +366,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Medical Oncology
+                                                        Medical Oncology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -372,7 +377,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Surgical Oncology
+                                                        Surgical Oncology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -383,7 +388,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Vascular Surgery
+                                                        Vascular Surgery
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -394,7 +399,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Pulmonology
+                                                        Pulmonology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -405,7 +410,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       OMFS (Oral & Maxillofacial Surgery)
+                                                        OMFS (Oral & Maxillofacial Surgery)
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -416,7 +421,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Cosmetology & Aesthetic Medicine
+                                                        Cosmetology & Aesthetic Medicine
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -427,7 +432,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Cardiology
+                                                        Cardiology
                                                     </Link>
                                                 </li>
                                                 <li>
@@ -438,10 +443,10 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Plastic & Reconstructive Surgery
+                                                        Plastic & Reconstructive Surgery
                                                     </Link>
                                                 </li>
-                                                 <li>
+                                                <li>
                                                     <Link
                                                         to="/gynaecology"
                                                         onClick={() => {
@@ -449,7 +454,7 @@ const Navbar = () => {
                                                             setAreaMenuOpen(false);
                                                         }}
                                                     >
-                                                       Gynaecology
+                                                        Gynaecology
                                                     </Link>
                                                 </li>
 
@@ -467,7 +472,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
 
-                                    <li className="mobile-submenu">
+                                    {/* <li className="mobile-submenu">
 
                                         <div
                                             className="mobile-submenu-title"
@@ -557,9 +562,9 @@ const Navbar = () => {
 
                                         )}
 
-                                    </li>
+                                    </li> */}
 
-                                    <li className="mobile-submenu">
+                                    {/* <li className="mobile-submenu">
 
                                         <div
                                             className="mobile-submenu-title"
@@ -571,9 +576,9 @@ const Navbar = () => {
 
                                         {internationalMenuOpen && (
 
-                                            <ul className="mobile-submenu-list">
+                                            <ul className="mobile-submenu-list"> */}
 
-                                                <li>
+                                    {/* <li>
                                                     <Link
                                                         to="/international-services"
                                                         onClick={() => {
@@ -583,9 +588,9 @@ const Navbar = () => {
                                                     >
                                                         International Services
                                                     </Link>
-                                                </li>
+                                                </li> */}
 
-                                                <li>
+                                    {/* <li>
                                                     <Link
                                                         to="/visa-assistance"
                                                         onClick={() => {
@@ -595,9 +600,9 @@ const Navbar = () => {
                                                     >
                                                         Visa Assistance
                                                     </Link>
-                                                </li>
+                                                </li> */}
 
-                                                <li>
+                                    {/* <li>
                                                     <Link
                                                         to="/travel-support"
                                                         onClick={() => {
@@ -607,13 +612,13 @@ const Navbar = () => {
                                                     >
                                                         Travel Support
                                                     </Link>
-                                                </li>
+                                                </li> */}
 
-                                            </ul>
+                                    {/* </ul>
 
                                         )}
 
-                                    </li>
+                                    </li> */}
 
                                     <li>
                                         <Link
@@ -696,9 +701,9 @@ const Navbar = () => {
                                 <li><Link to="/case-studies">Patient Rights & Responsibility</Link></li>
                                 <li><Link to="/case-studies">Visiting Hours & Directions</Link></li>
                             </ul>
-                        </li> */}
+                        </li>
 
-                        {/* <li>
+                        <li>
                             <a className="nav-link dropdown-toggle">
                                 INTERNATIONAL PATIENT
                             </a>
@@ -713,7 +718,7 @@ const Navbar = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 

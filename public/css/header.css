@@ -488,39 +488,63 @@ body {
     }
 
     /* Action Buttons */
-    .mobile-action-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
+.mobile-action-buttons {
+    display: flex;
+    justify-content: flex-end;   /* push buttons to the right */
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
 
-    .mobile-emergency-btn,
-    .mobile-book-btn {
-        text-decoration: none;
-        color: #fff;
-        padding: 12px;
-        border-radius: 6px;
-        text-align: center;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-        font-size: 14px;
-    }
+.mobile-emergency-btn,
+.mobile-book-btn {
 
-    .mobile-emergency-btn {
-        background: #ef2b2d;
-    }
+    flex: 0 0 auto;          /* don't stretch */
 
-    .mobile-book-btn {
-        background: #2dbb63;
-    }
+    width: fit-content;
+    min-width: 145px;
 
-    .mobile-emergency-btn span,
-    .mobile-book-btn span {
-        font-size: 12px;
-        margin-top: 4px;
-    }
+    padding: 6px 10px;
+    min-height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    border-radius: 8px;
+}
+
+.mobile-emergency-btn span,
+.mobile-book-btn span {
+    font-size: 9px;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.mobile-emergency-btn i,
+.mobile-book-btn i {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.mobile-emergency-btn i {
+    color: #d62828;
+}
+
+.mobile-book-btn i {
+    color: #2f9e44;
+}
+
+.mobile-emergency-btn div,
+.mobile-book-btn div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    white-space: nowrap;
+    line-height: 1.15;
+}
 
     /* Hide desktop contact */
     .nav-contact {
@@ -794,48 +818,63 @@ body {
     }
 
     /* Action Buttons */
-    .mobile-action-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
+.mobile-action-buttons {
+    display: flex;
+    justify-content: flex-end;   /* push buttons to the right */
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
 
-    .mobile-emergency-btn,
-    .mobile-book-btn {
+.mobile-emergency-btn,
+.mobile-book-btn {
 
-        text-decoration: none;
-        color: #fff;
-        padding: 12px;
-        border-radius: 6px;
-        text-align: center;
-        font-weight: bold;
+    flex: 0 0 auto;          /* don't stretch */
 
-        display: flex;
-        flex-direction: column;
+    width: fit-content;
+    min-width: 145px;
 
-        font-size: 14px;
+    padding: 6px 10px;
+    min-height: 36px;
 
-    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    border-radius: 8px;
+}
+
+.mobile-emergency-btn span,
+.mobile-book-btn span {
+    font-size: 10px;
+    margin-top: 2px;
+}
 
     .mobile-emergency-btn {
-        background: #ef2b2d;
-    }
+    background: #fff5f5;
+    color: #d62828;
+    border: 1px solid #ffd6d6;
+}
 
-    .mobile-book-btn {
-        background: #2dbb63;
-    }
+.mobile-book-btn {
+    background: #f3fcf6;
+    color: #2f9e44;
+    border: 1px solid #d7f3df;
+}
 
-    .mobile-emergency-btn span,
-    .mobile-book-btn span {
-        font-size: 12px;
-        margin-top: 4px;
-    }
+.mobile-emergency-btn span,
+.mobile-book-btn span {
+    font-size: 9px;
+    margin-top: 1px;
+    opacity: .8;
+}
 
     /* Hero Section */
     .hero-text {
-        padding: 220px 20px 20px !important;
-    }
+    padding: 150px 20px 20px !important;
+}
 
     .hero-text h1 {
         font-size: 2rem !important;
@@ -1049,19 +1088,92 @@ body {
     overflow: visible;
 }
 .mobile-menu-content {
-    position: fixed;
-    top: 160px; /* below logo + buttons */
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 160px);
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
     background: #005b96;
-    z-index: 9999;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    height: auto;
+    position: static;
+    width: 100%;
+}
 
-    padding-bottom: 80px;
+/* ===========================
+   Desktop Contact Badges
+=========================== */
 
-    -webkit-overflow-scrolling: touch;
+.contact-badge{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 18px;
+    border-radius:10px;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.contact-badge i{
+    font-size:22px;
+}
+
+.contact-badge div{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+}
+
+.contact-badge span{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.3px;
+}
+
+.contact-badge strong{
+    font-size:15px;
+    font-weight:700;
+}
+
+/* Emergency */
+.emergency-badge{
+    background:#fff5f5;
+    color:#d62828;
+    border:1px solid #ffd6d6;
+}
+
+.emergency-badge i{
+    color:#d62828;
+}
+
+/* Appointment */
+.appointment-badge{
+    background:#f3fcf6;
+    color:#2f9e44;
+    border:1px solid #d7f3df;
+}
+
+.appointment-badge i{
+    color:#2f9e44;
+}
+
+/* Force desktop badge colors */
+
+.contact-badge.emergency-badge{
+    background:#fff5f5 !important;
+    color:#d62828 !important;
+    border:1px solid #ffd6d6 !important;
+}
+
+.contact-badge.appointment-badge{
+    background:#f3fcf6 !important;
+    color:#2f9e44 !important;
+    border:1px solid #d7f3df !important;
+}
+
+.contact-badge.emergency-badge i{
+    color:#d62828 !important;
+}
+
+.contact-badge.appointment-badge i{
+    color:#2f9e44 !important;
 }

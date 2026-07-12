@@ -82,7 +82,7 @@ const Landing = () => {
                 </div>
             </div>
 
-            <div className="about-section bg-white pt-100 pb-70">
+            {/* <div className="about-section bg-white pt-100 pb-70">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 pb-30">
@@ -120,7 +120,7 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
           
             <div className="testimonial-section position-relative">
