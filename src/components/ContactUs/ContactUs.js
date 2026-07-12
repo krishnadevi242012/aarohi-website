@@ -89,7 +89,7 @@ const ContactUs = () => {
     return (
         <section>
             <Helmet>
-                <title>Evaluationz: Contact us</title>
+                <title>Aarohi: Contact us</title>
 
                 <meta name="description" content="Have someone from Evaluationz reach out to you with out various digital and realtime offerings" />
 
