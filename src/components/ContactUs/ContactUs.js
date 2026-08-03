@@ -30,17 +30,8 @@ const ContactUs = () => {
             const { name, company, title, email, phone, city, message } = formState;
             const postData = { "name": name, "company": company, "title": title, "email": email, "phone": phone, "city": city, "message": message }
             
-            // const response = await axios.post(
-            //     "http://localhost:5000/contact-us",
-            //     {
-            //         name,
-            //         email,
-            //         phone,
-            //         message,
-            //     }
-            // );
             const response = await axios.post(
-                `${API_URL}/contact-us`,
+                "https://api.aarohihospital.in/contact-us",
                 {
                     name,
                     email,
@@ -48,6 +39,15 @@ const ContactUs = () => {
                     message,
                 }
             );
+            // const response = await axios.post(
+            //     `${API_URL}/contact-us`,
+            //     {
+            //         name,
+            //         email,
+            //         phone,
+            //         message,
+            //     }
+            // );
             if (response.status === 200) {
                 navigate('/thankyou');
                 /*history.push('/thankyou');*/
