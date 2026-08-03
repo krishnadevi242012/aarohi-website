@@ -6,35 +6,7 @@ const Landing = () => {
     return (
       <section>
         <Helmet>
-          <title>Evaluationz: Thank You</title>
-          <meta
-            name="description"
-            content="get in touch"
-          />
-          <meta
-            name="keywords"
-            content="get-in-touch, thank-you"
-          />
-          <meta
-            property="og:description"
-            content="get in touch"
-          />
-          <meta
-            property="og:url"
-            content="https://www.evaluationz.com/thankyou"
-          />
-          <meta
-            property="og:image"
-            content="https://www.evaluationz.com/images/favicon.jpg"
-          />
-          <meta
-            property="og:image:secure_url"
-            content="https://www.evaluationz.com/images/favicon.jpg"
-          />
-          <meta
-            name="twitter:image"
-            content="https://www.evaluationz.com/images/favicon.jpg"
-          />
+          <title>Aarohi Hospital: Thank You</title>
         </Helmet>
         <div className="service-section bg-light pt-130 pb-70">
             <div class="container shadow-sm">

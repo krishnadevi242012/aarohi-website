@@ -27,12 +27,12 @@ const Footer = () => {
                                         {/* <li>
                                             <Link to={{pathname: "https://www.linkedin.com/company/evaluationz-india-pvt-ltd", search:"?viewAsMember=true"}} target="_blank" name="linkedin"><i className="mdi mdi-linkedin"></i></Link>
                                         </li> */}
-                                        <li>
+                                        {/* <li>
                                             <Link to={{pathname: "https://www.facebook.com/Evaluationz-212093105791989"}} target="_blank" name="facebook"><i className="mdi mdi-facebook"></i></Link>
                                         </li>
                                         <li>
                                             <Link to={{pathname: "https://www.facebook.com/Evaluationz-212093105791989"}} target="_blank" name="instagram"><i className="mdi mdi-instagram"></i></Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -51,12 +51,12 @@ const Footer = () => {
                                             <div className="col">
                                                 <Link to="/case-studies" className="no-wrap text-uppercase">Doctors</Link>
                                             </div>
-                                            <div className="col">
+                                            {/* <div className="col">
                                                 <Link to="/technology" className="no-wrap text-uppercase">Patients & Vistiers</Link>
                                             </div>
                                             <div className="col">
                                                 <Link to="/blog" className="no-wrap text-uppercase">International Patients</Link>
-                                            </div>
+                                            </div> */}
         
                                             <div className="col">
                                                 <Link to="/about-us" className="no-wrap text-uppercase">ABOUT</Link>

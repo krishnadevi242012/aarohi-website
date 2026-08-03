@@ -81,47 +81,6 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className="about-section bg-white pt-100 pb-70">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6 pb-30">
-                            <div className="about-section-item about-item-details">
-                                <div className="section-title section-title-left text-start">
-                                    <h2 className="c-blue">CT / MRI</h2>
-                                </div>
-                                <div className="about-content">
-                                    <p className="text-black">Trust, but verify is an old proverb that has taken new
-                                        meaning in this digital age.</p>
-
-                                    <p className="text-black">
-                                        The importance of verification cannot be overemphasised.
-                                        The need for verification has expanded from employee
-                                        background verification to almost any aspect of current
-                                        living. And Evaluationz is one of the few companies that
-                                        have been able to keep pace with the ever-expanding
-                                        needs. And what’s more. We have been able to harness the
-                                        power of AI to create the proprietary Blue G tech platform
-                                        that makes real-time digital verification a possibility.
-                                    </p>
-                                    <Link to="/services"
-                                          target="_blank"
-                                          className="btn btn-primary btn-blue">
-                                        Explore
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-6 pb-30">
-                            <div className="about-section-item about-item-image text-center">
-                                <img src="images/landing/image-02.jpg" alt="shape" className="shadow-2xl" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
           
             <div className="testimonial-section position-relative">
                 <div className="container-fluid pt-5 pb-3 bg-off-white">
