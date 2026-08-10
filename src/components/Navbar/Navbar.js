@@ -55,7 +55,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile Buttons */}
-                    <div className="mobile-header d-md-none">
+                    <div className="mobile-header">
 
                         {/* Top Row */}
                         <div className="mobile-header-top">

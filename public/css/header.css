@@ -1177,3 +1177,207 @@ body {
 .contact-badge.appointment-badge i{
     color:#2f9e44 !important;
 }
+
+.mobile-submenu-title {
+    caret-color: transparent !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    outline: none !important;
+}
+
+.mobile-submenu-title span {
+    caret-color: transparent !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    outline: none !important;
+}
+
+/* /* =====================================
+   TABLET + MOBILE NAVIGATION
+   ===================================== */
+
+@media (max-width: 991px) {
+
+    /* Hide desktop contact buttons */
+    .nav-contact {
+        display: none !important;
+    }
+
+    /* Mobile/Tablet Header */
+    .mobile-header {
+        display: block !important;
+        width: 100%;
+    }
+
+    /* Hide desktop blue navigation */
+    .menu.bg-logo-blue {
+        display: none !important;
+    }
+} */
+
+/* =====================================
+   IOS-SAFE REACT BANNER CAROUSEL
+   ===================================== */
+
+.banner-carousel-custom {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-slide-track {
+    display: flex;
+    width: 200%;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+
+.banner-slide {
+    width: 50%;
+    flex-shrink: 0;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Dots */
+
+.banner-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.banner-dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+
+.banner-dots button.active {
+    background: #ffffff;
+}
+
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .banner-slide {
+        min-height: 500px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .banner-slide {
+        min-height: 520px;
+    }
+
+    .banner-slide .container {
+        width: 100%;
+    }
+
+    .banner-slide .col-lg-6 {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   FINAL NAVBAR RESPONSIVE FIX
+   ========================================== */
+
+@media (min-width: 1080px) {
+
+    .mobile-header {
+        display: none !important;
+    }
+
+    .mobile-nav-menu {
+        display: none !important;
+    }
+
+    .nav-contact {
+        display: flex !important;
+    }
+
+    .menu.bg-logo-blue {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1079px) {
+
+    .nav-contact {
+        display: none !important;
+    }
+
+    .mobile-header {
+        display: block !important;
+    }
+
+    .menu.bg-logo-blue {
+        display: none !important;
+    }
+
+    .mobile-nav-menu {
+        display: none !important;
+    }
+
+    .mobile-nav-menu.show-mobile-menu {
+        display: block !important;
+    }
+}
+
+/* ==========================================
+   DESKTOP BLUE NAVIGATION BAR
+   ========================================== */
+
+@media screen and (min-width: 1080px) {
+
+    .eval-nav .menu.bg-logo-blue {
+        display: flex !important;
+        width: 100%;
+        min-height: 55px;
+        height: 55px;
+        align-items: center;
+        justify-content: flex-end;
+
+        background-color: #005b96 !important;
+
+        position: relative;
+        z-index: 100;
+    }
+
+    .eval-nav .menu.bg-logo-blue > ul {
+        display: flex !important;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .eval-nav .menu.bg-logo-blue > ul > li {
+        display: block;
+    }
+
+    .eval-nav .menu.bg-logo-blue > ul > li > a {
+        color: #ffffff !important;
+    }
+}
