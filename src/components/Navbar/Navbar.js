@@ -622,6 +622,15 @@ const Navbar = () => {
 
                                     <li>
                                         <Link
+                                            to="/appointment"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            BOOK APPOINTMENT
+                                        </Link>
+                                    </li>
+
+                                    <li>
+                                        <Link
                                             to="/contact"
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
@@ -713,6 +722,7 @@ const Navbar = () => {
                                 <li><Link to="/case-studies">CASE STUDIES</Link></li>
                             </ul>
                         </li> */}
+                        <li><Link to="/appointment">BOOK APPOINTMENT</Link></li>
                         <li><Link to="/contact">CONTACT US</Link></li>
                     </ul>
                 </div>

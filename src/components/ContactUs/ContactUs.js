@@ -39,22 +39,10 @@ const ContactUs = () => {
                     message,
                 }
             );
-            // const response = await axios.post(
-            //     `${API_URL}/contact-us`,
-            //     {
-            //         name,
-            //         email,
-            //         phone,
-            //         message,
-            //     }
-            // );
+         
             if (response.status === 200) {
                 navigate('/thankyou');
-                /*history.push('/thankyou');*/
-                //     swal("We have sent your request to the right desk. You will be contacted shortly")
-                //         .then((value) => {
-                //             window.location.reload()
-                //         });
+
             }
 
             setValidated(true);

@@ -67,7 +67,7 @@ app.post("/send-appointment", async (req, res) => {
     name,
     email,
     phone,
-    doctor,
+    // doctor,
     speciality,
     appointmentDate,
   } = req.body;
@@ -83,7 +83,7 @@ app.post("/send-appointment", async (req, res) => {
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Phone:</b> ${phone}</p>
-        <p><b>Doctor:</b> ${doctor}</p>
+        // <p><b>Doctor:</b> ${doctor}</p>
         <p><b>Speciality:</b> ${speciality}</p>
         <p><b>Appointment Date:</b> ${appointmentDate}</p>
       `,

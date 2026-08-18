@@ -39,6 +39,7 @@ import ThoughtPaper from "../components/ThoughtPaper/ThoughtPaperLanding";
 import ThoughtPaperThankYou from "../components/ThoughtPaperThankYou/ThoughtPaperThankYouLanding";
 import ContactUs from "../components/ContactUs/ContactUs";
 import BookAppointment from "../components/BookAppointment/BookAppointment";
+import AppointmentThankYou from "../components/BookAppointment/Thankyou";
 import Thankyou from "../components/ContactUs/Thankyou";
 import Thanks from "../components/ContactUs/Thanks";
 import Industries from "../components/Industries/Industries";
@@ -139,6 +140,7 @@ const App = () => {
                             <Route path='/rental' element={<Rental />} />
                             <Route path='/contact' element={<ContactUs />} />
                             <Route path='/appointment' element={<BookAppointment />} />
+                            <Route path='/appointment-thankyou' element={<AppointmentThankYou />} />
                             <Route path='/thankyou' element={<Thankyou />} />
                             <Route path='/thanks' element={<Thanks />} />
                             <Route path='/faq' element={<FAQ />} />
