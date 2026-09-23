@@ -15,7 +15,7 @@ const Landing = () => {
                         <div className="col-lg-6 pb-30">
                             <div className="about-section-item about-item-details">
                                 <div className="section-title section-title-left text-start">
-                                    <h1 className="c-blue font-weight-bolder">Medical Oncology</h1>
+                                    <h1 className="c-blue font-weight-bolder">Oncology</h1>
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ const Landing = () => {
     return (
         <section>
             <Helmet>
-                <title>Aarohi Hospital: General Medicine & Cardiac Care</title>
+                <title>Aarohi Hospital: General Medicine</title>
             </Helmet>
 
             <div className="about-section general-medicine-section-background bg-white py-4 mt-5">
@@ -15,7 +15,7 @@ const Landing = () => {
                         <div className="col-lg-6 pb-30">
                             <div className="about-section-item about-item-details">
                                 <div className="section-title section-title-left text-start">
-                                    <h1 className="c-red font-weight-bolder">General Medicine & Cardiac Care</h1>
+                                    <h1 className="c-red font-weight-bolder">General Medicine</h1>
                                 </div>
                             </div>
                         </div>
@@ -30,11 +30,13 @@ const Landing = () => {
                             <div className="about-section-item about-item-details">
                             
                                 <div className="about-content">
-                                    <p className="font-weight-normal">The General Medicine & Cardiac Care department at Aarohi Hospital offers comprehensive medical care for adults, with a strong emphasis on heart health, lifestyle-related disorders, and preventive medicine. Our experienced physicians provide personalized care focused on early diagnosis, effective treatment, and long-term health management.
-We diagnose and manage a wide range of medical conditions including diabetes, hypertension, thyroid disorders, infections, respiratory illnesses, and gastrointestinal problems, along with early and preventive cardiac conditions. Special attention is given to patients with high blood pressure, cholesterol abnormalities, chest discomfort, palpitations, breathlessness, and cardiovascular risk factors.
-Cardiac care at Aarohi Hospital is centered on early detection, risk assessment, and prevention of heart disease. Our services include ECG evaluation, cardiac risk profiling, medication management, lifestyle and dietary counseling, and regular monitoring, helping patients reduce risk and maintain heart health.
-By combining clinical expertise, patient education, and preventive strategies, our General Medicine & Cardiac Care team supports patients in achieving better heart health, effective disease control, and long-term well-being.
-</p>
+                                    <p className="font-weight-normal">The General Medicine department at Aarohi Hospital provides comprehensive medical care for adults, with a strong emphasis on accurate diagnosis, effective treatment, preventive care, and long-term health management. Our experienced physicians provide personalized care focused on understanding each patient’s health needs and supporting overall well-being.
+
+We diagnose and manage a wide range of medical conditions including diabetes, hypertension, thyroid disorders, infections, respiratory illnesses, gastrointestinal problems, and other common and chronic medical conditions. Our team focuses on early diagnosis, appropriate treatment, regular monitoring, and effective management of long-term health conditions.
+
+General Medicine care at Aarohi Hospital also includes preventive health assessments, medication management, lifestyle and dietary counseling, and monitoring of chronic conditions. We work closely with patients to identify health risks early, prevent complications, and promote healthier lifestyle choices.
+
+By combining clinical expertise, patient education, preventive strategies, and personalized care, our General Medicine team supports patients in achieving better disease control, improved health, and long-term well-being.</p>
 
                                 </div>
                               

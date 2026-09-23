@@ -1,21 +1,23 @@
 import React from "react";
-import { Helmet } from 'react-helmet';
-import ReadMoreAndLess from 'react-read-more-less';
+import { Helmet } from "react-helmet";
+import ReadMoreAndLess from "react-read-more-less";
 
 const Landing = () => {
     return (
         <section>
             <Helmet>
-                <title>Aarohi Hospital: Pulmonology (Chest Medicine)</title>
+                <title>Aarohi Hospital: 24×7 Laboratory Services</title>
             </Helmet>
 
-            <div className="about-section pulmonology-background bg-white py-4 mt-5">
+            <div className="about-section laboratory-background bg-white py-4 mt-5">
                 <div className="container pt-5">
                     <div className="row align-items-center">
                         <div className="col-lg-6 pb-30">
                             <div className="about-section-item about-item-details">
                                 <div className="section-title section-title-left text-start">
-                                    <h1 className="c-blue font-weight-bolder">Respiratory Medicine</h1>
+                                    <h1 className="c-blue font-weight-bolder">
+                                        24×7 Laboratory Services
+                                    </h1>
                                 </div>
                             </div>
                         </div>
@@ -31,13 +33,14 @@ const Landing = () => {
 
                                 <div className="about-content">
                                     <p className="font-weight-normal">
-                                        At Aarohi Hospital, we provide comprehensive Respiratory Medicine (Pulmonology) services for the prevention, diagnosis, and treatment of respiratory and lung-related disorders. Our experienced pulmonologists are dedicated to delivering personalized care using advanced diagnostic techniques and evidence-based treatment approaches.
+                                        At Aarohi Hospital, our 24×7 Laboratory Services provide reliable and timely diagnostic support for accurate diagnosis, effective treatment, and continuous patient care. Our laboratory is supported by modern diagnostic technology and trained laboratory professionals to ensure high-quality and dependable test results.
                                     </p>
 
                                     <p className="font-weight-normal">
-                                        We specialize in the management of asthma, chronic obstructive pulmonary disease (COPD), pneumonia, tuberculosis, interstitial lung diseases, sleep-related breathing disorders, allergies, and other respiratory conditions. Our services include pulmonary function testing, bronchoscopy, sleep studies, respiratory rehabilitation, and critical respiratory care. With modern facilities and a patient-centered approach, we focus on early diagnosis, effective treatment, symptom control, and improving long-term lung health and quality of life.
+                                        We offer a wide range of laboratory investigations to support routine health assessments, emergency care, diagnosis, treatment monitoring, and preventive healthcare. With round-the-clock availability, efficient sample processing, and a focus on accuracy and quality, our laboratory services help doctors make informed clinical decisions and provide timely care to patients.
                                     </p>
                                 </div>
+
                             </div>
                         </div>
                     </div>

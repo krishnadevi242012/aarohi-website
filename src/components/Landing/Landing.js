@@ -30,97 +30,173 @@ const Landing = () => {
                 <title>Aarohi Hospital | Multispacility Hospital in Bengaluru </title>
             </Helmet>
 
-            <div className="testimonial-section p-b-100 position-relative">
-                <div className="container-fluid pt-100 pb-30 bg-background-image">
-                    <div className="banner-carousel-custom">
+            <div className="hospital-hero">
 
-                        <div
-                            className="banner-slide-track"
-                            style={{
-                                transform: `translateX(-${currentSlide * 100}%)`
-                            }}
-                        >
+                <div className="banner-carousel-custom">
 
-                            {/* Slide 1 */}
-                            <div className="banner-slide">
-                                <div className="container">
-                                    <div className="row align-items-center">
-                                        <div className="col-lg-6 pb-30">
-                                            <div className="about-section-item about-item-details">
-                                                <div className="section-title section-title-left text-start">
-                                                    <h2 className="c-red">
-                                                        Your wellness, Our priority Your path to better health begins here.
-                                                    </h2>
-                                                </div>
+                    <div
+                        className="banner-slide-track"
+                        style={{
+                            transform: `translateX(-${currentSlide * 50}%)`
+                        }}
+                    >
 
-                                                <div className="about-content">
-                                                    <p className="text-white">
-                                                        Where compassionate care meets advanced technology.
-                                                    </p>
+                        {/* =====================================================
+        SLIDE 1
+       ===================================================== */}
+                        <div className="banner-slide">
 
-                                                    <Link
-                                                        to="/technology"
-                                                        target="_blank"
-                                                        className="btn btn-primary btn-blue"
-                                                    >
-                                                        Book Appointment
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            {/* HERO IMAGE */}
+                            <div className="hero-image-column">
+                                <picture>
+                                    {/* Mobile image */}
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcSet="/images/landing/hospital-mobile.png"
+                                    />
+
+                                    {/* Desktop image */}
+                                    <img
+                                        src="/images/landing/hospital.png"
+                                        alt="Aarohi Hospital"
+                                        className="hospital-hero-image"
+                                    />
+                                </picture>
                             </div>
 
+                            {/* TEXT CONTENT */}
+                            <div className="container">
+                                <div className="row align-items-center">
 
-                            {/* Slide 2 */}
-                            <div className="banner-slide">
-                                <div className="container">
-                                    <div className="row align-items-center">
-                                        <div className="col-lg-6 pb-30">
-                                            <div className="about-section-item about-item-details">
-                                                <div className="section-title section-title-left text-start">
-                                                    <h2 className="c-red">
-                                                        24 / 7 Emergency Care
-                                                    </h2>
-                                                </div>
+                                    <div className="col-lg-6">
+                                        <div className="about-section-item about-item-details">
 
-                                                <div className="about-content">
-                                                    <Link
-                                                        to="/technology"
-                                                        target="_blank"
-                                                        className="btn btn-primary btn-blue"
-                                                    >
-                                                        View All Services
-                                                    </Link>
-                                                </div>
+                                            <div className="section-title section-title-left text-start">
+
+                                                <h2>
+                                                    Your wellness,{" "}
+                                                    <span className="highlight">
+                                                        Our priority.
+                                                    </span>
+                                                    <br />
+                                                    Your path to better health begins here.
+                                                </h2>
+
                                             </div>
+
+                                            <div className="about-content">
+
+                                                <p>
+                                                    Where compassionate care meets advanced
+                                                    technology.
+                                                </p>
+
+                                                {/* <Link
+                                                    to="/book-appointment"
+                                                    className="btn btn-primary btn-blue"
+                                                >
+                                                    Book Appointment
+                                                </Link> */}
+
+                                            </div>
+
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
                         </div>
 
 
-                        {/* Dots */}
-                        <div className="banner-dots">
-                            <button
-                                className={currentSlide === 0 ? "active" : ""}
-                                onClick={() => setCurrentSlide(0)}
-                                aria-label="Slide 1"
-                            />
+                        {/* =====================================================
+        SLIDE 2
+       ===================================================== */}
+                        <div className="banner-slide">
 
-                            <button
-                                className={currentSlide === 1 ? "active" : ""}
-                                onClick={() => setCurrentSlide(1)}
-                                aria-label="Slide 2"
-                            />
+                            {/* HERO IMAGE */}
+                            <div className="hero-image-column">
+                                <picture>
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcSet="/images/landing/emergency-mobile.png"
+                                    />
+
+                                    <img
+                                        src="/images/landing/emergency-landing.png"
+                                        alt="Aarohi Hospital Emergency Care"
+                                        className="hospital-hero-image"
+                                    />
+                                </picture>
+                            </div>
+
+                            {/* TEXT CONTENT */}
+                            <div className="container">
+                                <div className="row align-items-center">
+
+                                    <div className="col-lg-6">
+                                        <div className="about-section-item about-item-details">
+
+                                            <div className="section-title section-title-left text-start">
+
+                                                <h2>
+                                                    <span className="highlight">
+                                                        24 / 7
+                                                    </span>{" "}
+                                                    Emergency Care
+                                                    <br />
+                                                    When Every Second Matters
+                                                </h2>
+
+                                            </div>
+
+                                            <div className="about-content">
+
+                                                <p>
+                                                    Compassionate emergency care supported by
+                                                    advanced medical facilities and experienced
+                                                    healthcare professionals.
+                                                </p>
+
+                                                {/* <Link
+                                                    to="/technology"
+                                                    target="_blank"
+                                                    className="btn btn-primary btn-blue"
+                                                >
+                                                    View Our Services
+                                                </Link> */}
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
+
+
+                    {/* Dots */}
+                    <div className="banner-dots">
+                        <button
+                            className={currentSlide === 0 ? "active" : ""}
+                            onClick={() => setCurrentSlide(0)}
+                            aria-label="Slide 1"
+                        />
+
+                        <button
+                            className={currentSlide === 1 ? "active" : ""}
+                            onClick={() => setCurrentSlide(1)}
+                            aria-label="Slide 2"
+                        />
+                    </div>
+
                 </div>
             </div>
+
 
             {/* CT / MRI Section */}
             <div className="about-section bg-white pt-100 pb-70">
@@ -150,7 +226,7 @@ const Landing = () => {
                                         At Aarohi Hospital, we combine advanced imaging technology with experienced medical expertise to deliver reliable and precise diagnostic support. Our focus is on providing high-quality imaging in a comfortable and patient-friendly environment, helping doctors plan the most appropriate treatment for every patient.
                                     </p>
 
-                                    <p className="text-black">          
+                                    <p className="text-black">
                                         Because better imaging leads to better-informed decisions, and better-informed decisions lead to better care.
                                     </p>
 
@@ -708,7 +784,7 @@ const Landing = () => {
                                 <div className="section-title section-title-left text-start">
                                     <h3 className="c-red">Book An Appointment.</h3>
                                 </div>
-                                <Link to="/contact" target="_blank" className="btn btn-primary btn-blue">Book Now</Link>
+                                <Link to="/appointment" target="_blank" className="btn btn-primary btn-blue">Book Now</Link>
                             </div>
                         </div>
 

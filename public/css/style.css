@@ -446,7 +446,7 @@ button:focus, button:active {
 } */
 
 .bg-background-image {
-  background-image: url("/images/landing/image-01.jpg");
+  background-image: url("/images/landing/hospital.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -489,7 +489,7 @@ button:focus, button:active {
 }
 
 .about-section-background {
-  background-image: url("/images/landing/image-01.jpg");
+  background-image: url("/images/landing/hospital.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -660,7 +660,7 @@ button:focus, button:active {
 }
 
 .general-laparoscopic-surgery-background {
-  background-image: url("/images/services/general-laparoscopic-surgery-background.jpg");
+  background-image: url("/images/services/general-laparoscopic-surgery-background1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1088,6 +1088,20 @@ button:focus, button:active {
   min-height: 400px !important;
 }
 
+.medical-oncology-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.surgical-oncology-background {
+  background-image: url("/images/services/surgical-oncology-background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
 .surgical-oncology-background::before {
   content: "";
   position: absolute;
@@ -1103,6 +1117,202 @@ button:focus, button:active {
 
 /* Keep content above overlay */
 .surgical-oncology-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.psychiatry-background {
+  background-image: url("/images/services/psychiatry.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.psychiatry-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.psychiatry-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.laboratory-background {
+  background-image: url("/images/services/lab.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.laboratory-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.laboratory-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.emergency-background {
+  background-image: url("/images/services/emergency.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.emergency-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.emergency-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.dialysis-background {
+  background-image: url("/images/services/dialysis.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.dialysis-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.dialysis-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.operation-theatre-background {
+  background-image: url("/images/services/modular-ot.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.operation-theatre-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.operation-theatre-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.physiotherapy-background {
+  background-image: url("/images/services/physiotherapy.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.physiotherapy-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.physiotherapy-background .container {
+  position: relative;
+  z-index: 1;
+}
+
+.pharmacy-background {
+  background-image: url("/images/services/pharmacy.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.pharmacy-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.pharmacy-background .container {
   position: relative;
   z-index: 1;
 }

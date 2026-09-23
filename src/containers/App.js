@@ -2,14 +2,15 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Landing from "../components/Landing/Landing";
+import AreaOfCare from "../components/AreaOfCare/AreaOfCare";
 import AboutUs from "../components/AboutUs/AboutUs";
-import GeneralMedicineCardiacCare from "../components/Services/SubPages/GeneralMedicine&CardiacCare";
+import GeneralMedicineCardiacCare from "../components/Services/SubPages/GeneralMedicine";
 import Orthopedics from "../components/Services/SubPages/Orthopedics";
 import PreventiveHealthCheckups from "../components/Services/SubPages/PreventiveHealthCheckups";
-import EmergancyCriticalCare from "../components/Services/SubPages/EmergencyCriticalCare";
+import EmergancyCriticalCare from "../components/Services/SubPages/IntensiveCareUnit";
 import Obstetrics from "../components/Services/SubPages/ObstetricsGynaecology";
 import Diagnostics from "../components/Services/SubPages/DiagnosticsImagingServices";
-import GeneralLaparoscopicSurgery from "../components/Services/SubPages/GeneralLaparoscopicSurgery";
+import GeneralLaparoscopicSurgery from "../components/Services/SubPages/GeneralSurgery";
 import NeonatologyNewbornCare from "../components/Services/SubPages/NeonatologyNewbornCare";
 import Paediatrics from "../components/Services/SubPages/Paediatrics";
 import Neurosurgery from "../components/Services/SubPages/Neurosurgery";
@@ -18,7 +19,8 @@ import Anaesthesiology from "../components/Services/SubPages/Anaesthesiology";
 import PainManagement from "../components/Services/SubPages/PainManagement";
 import Neurology from "../components/Services/SubPages/Neurology";
 import Ent from "../components/Services/SubPages/Ent";
-import NephrologyDialysis from "../components/Services/SubPages/NephrologyDialysis";
+import NephrologyDialysis from "../components/Services/SubPages/Nephrology";
+import Psychiatry from "../components/Services/SubPages/Psychiatry";
 import Urology from "../components/Services/SubPages/Urology";
 import MedicalGastroenterology from "../components/Services/SubPages/MedicalGastroenterology";
 import SurgicalGastroenterology from "../components/Services/SubPages/SurgicalGastroenterology";
@@ -32,6 +34,12 @@ import Cardiology from "../components/Services/SubPages/Cardiology";
 import Omfs from "../components/Services/SubPages/Omfs";
 import PlasticSurgery from "../components/Services/SubPages/PlasticSurgery";
 import Gynaecology from "../components/Services/SubPages/Gynaecology";
+import LaboratoryServices from "../components/Services/SubPages/LaboratoryServices";
+import ModularOT from "../components/Services/SubPages/ModularOT";
+import EmergencyCare from "../components/Services/SubPages/EmergencyCare";
+import Physiotherapy from "../components/Services/SubPages/Physiotherapy";
+import Pharmacy from "../components/Services/SubPages/Pharmacy";
+import Dialysis from "../components/Services/SubPages/Dialysis";
 import Careers from "../components/Careers/Careers";
 import CaseStudies from "../components/CaseStudies/CaseStudies";
 import Blog from "../components/Blog/BlogLanding";
@@ -50,7 +58,7 @@ import InternetCompanies from "../components/Industries/SubPages/InternetCompani
 import Matrimonial from "../components/Industries/SubPages/Matrimonial";
 import Dating from "../components/Industries/SubPages/Dating";
 import Rental from "../components/Industries/SubPages/Rental";
-import Technology from "../components/Technology/Technology";
+import Technology from "../components/Doctors/Doctors";
 import Footer from "../components/Footer/Footer";
 import FAQ from "../components/FAQ's/FAQ";
 import BlogDetails1 from "../components/Blog/BlogDetails1";
@@ -96,6 +104,7 @@ const App = () => {
                         <Routes>
                             <Route path='/' exact element={<Landing />} />
                             <Route path='/about-us' element={<AboutUs />} />
+                            <Route path='/area-of-care' element={<AreaOfCare />} />
                             <Route path='/general-medicine-cardiac-care' element={<GeneralMedicineCardiacCare/>}/>
                             <Route path='/preventive-health-check-ups' element={<PreventiveHealthCheckups/>}/>
                             <Route path='/emergancy-critical-care' element={<EmergancyCriticalCare/>}/>
@@ -122,8 +131,15 @@ const App = () => {
                             <Route path='/pulmonology' element={<Pulmonology/>}/>
                             <Route path='/omfs' element={<Omfs/>}/>
                             <Route path='/cosmetology' element={<CosmetologyAestheticMedicine/>}/>
+                            <Route path='/laboratory' element={<LaboratoryServices/>}/>
                             <Route path='/cardiology' element={<Cardiology/>}/>
                             <Route path='/plastic-surgery' element={<PlasticSurgery/>}/>
+                            <Route path='/modular-ot' element={<ModularOT/>}/>
+                            <Route path='/psychiatry' element={<Psychiatry/>}/>
+                            <Route path='/emergency-care' element={<EmergencyCare/>}/>
+                            <Route path='/physiotherapy' element={<Physiotherapy/>}/>
+                            <Route path='/pharmacy' element={<Pharmacy/>}/>
+                            <Route path='/dialysis' element={<Dialysis/>}/>
                             <Route path='/gynaecology' element={<Gynaecology/>}/>
                             <Route path='/careers' element={<Careers />} />
                             <Route path='/case-studies' element={<CaseStudies />} />

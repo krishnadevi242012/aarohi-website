@@ -6,16 +6,16 @@ const Landing = () => {
     return (
         <section>
             <Helmet>
-                <title>Aarohi Hospital: Pulmonology (Chest Medicine)</title>
+                <title>Aarohi Hospital: Psychiatry (OPD)</title>
             </Helmet>
 
-            <div className="about-section pulmonology-background bg-white py-4 mt-5">
+            <div className="about-section psychiatry-background bg-white py-4 mt-5">
                 <div className="container pt-5">
                     <div className="row align-items-center">
                         <div className="col-lg-6 pb-30">
                             <div className="about-section-item about-item-details">
                                 <div className="section-title section-title-left text-start">
-                                    <h1 className="c-blue font-weight-bolder">Respiratory Medicine</h1>
+                                    <h1 className="c-blue font-weight-bolder">Psychiatry (OPD)</h1>
                                 </div>
                             </div>
                         </div>
@@ -31,13 +31,14 @@ const Landing = () => {
 
                                 <div className="about-content">
                                     <p className="font-weight-normal">
-                                        At Aarohi Hospital, we provide comprehensive Respiratory Medicine (Pulmonology) services for the prevention, diagnosis, and treatment of respiratory and lung-related disorders. Our experienced pulmonologists are dedicated to delivering personalized care using advanced diagnostic techniques and evidence-based treatment approaches.
+                                        At Aarohi Hospital, we provide comprehensive Psychiatry (OPD) services focused on the assessment, diagnosis, and management of a wide range of mental health and emotional conditions. Our approach emphasizes personalized care, confidentiality, compassionate support, and evidence-based treatment to help individuals improve their mental well-being and quality of life.
                                     </p>
 
                                     <p className="font-weight-normal">
-                                        We specialize in the management of asthma, chronic obstructive pulmonary disease (COPD), pneumonia, tuberculosis, interstitial lung diseases, sleep-related breathing disorders, allergies, and other respiratory conditions. Our services include pulmonary function testing, bronchoscopy, sleep studies, respiratory rehabilitation, and critical respiratory care. With modern facilities and a patient-centered approach, we focus on early diagnosis, effective treatment, symptom control, and improving long-term lung health and quality of life.
+                                        Our psychiatric services include evaluation and management of anxiety, depression, stress-related conditions, sleep difficulties, mood disorders, behavioural concerns, and other mental health conditions. We focus on early identification, appropriate treatment, counselling, lifestyle guidance, and regular follow-up to support long-term mental wellness. Through a patient-centered approach, we aim to create a comfortable and supportive environment where individuals can seek care without hesitation.
                                     </p>
                                 </div>
+
                             </div>
                         </div>
                     </div>

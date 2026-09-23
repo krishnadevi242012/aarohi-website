@@ -15,7 +15,7 @@ const Landing = () => {
                         <div className="col-lg-6 pb-30">
                             <div className="about-section-item about-item-details">
                                 <div className="section-title section-title-left text-start">
-                                    <h1 className="c-blue font-weight-bolder">Vascular Surgery</h1>
+                                    <h1 className="c-blue font-weight-bolder">Cardiothoracic , Cardiovascular Surgery (CTVS) and Endovascular surgery</h1>
                                 </div>
                             </div>
                         </div>
@@ -28,17 +28,22 @@ const Landing = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12">
                             <div className="about-section-item about-item-details">
-                            
+
                                 <div className="about-content">
-                                    <p className="font-weight-normal">At Aarohi Hospital, we provide specialized Vascular Surgery services for the diagnosis and treatment of disorders affecting the arteries, veins, and lymphatic system. Our experienced vascular surgeons combine advanced technology with evidence-based care to deliver effective treatment and improve circulatory health.</p>
-                                    <p className="font-weight-normal">We specialize in the management of varicose veins, peripheral arterial disease, diabetic foot complications, vascular trauma, deep vein thrombosis (DVT), aneurysms, carotid artery disease, and other complex vascular conditions. Our services include minimally invasive endovascular procedures, vascular bypass surgeries, dialysis access creation, and comprehensive wound care. With state-of-the-art facilities and a multidisciplinary approach, we focus on accurate diagnosis, limb preservation, faster recovery, and long-term vascular health for every patient.</p>
+                                    <p className="font-weight-normal">
+                                        At Aarohi Hospital, we provide specialized Cardiothoracic, Cardiovascular Surgery (CTVS), and Endovascular Surgery services for the diagnosis and treatment of conditions affecting the heart, blood vessels, and circulatory system. Our experienced surgical team combines advanced technology, surgical expertise, and evidence-based care to provide safe and effective treatment for complex cardiovascular conditions.
+                                    </p>
+
+                                    <p className="font-weight-normal">
+                                        Our services include surgical treatment for coronary artery disease, heart valve disorders, aortic and vascular conditions, and other complex cardiovascular problems. We also provide minimally invasive and endovascular procedures whenever appropriate, with a focus on precise diagnosis, personalized treatment, patient safety, and faster recovery. Through a multidisciplinary approach and comprehensive perioperative care, we aim to improve cardiovascular health, restore function, and support long-term well-being.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         </section>
     );
 };
