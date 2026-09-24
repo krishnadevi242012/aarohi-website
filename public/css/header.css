@@ -2336,7 +2336,7 @@ body {
     }
 
     .area-care-hero-content {
-        padding: 60px 22px;
+         padding: 150px 22px 55px !important;
     }
 
     .area-care-hero h1 {
@@ -2837,3 +2837,2646 @@ body {
     }
 }
 
+/* =========================================================
+   AAROHI HOSPITAL - FACILITIES
+   CLEAN FINAL VERSION
+========================================================= */
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.hospital-facilities-section {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 55px 0 75px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION EYEBROW
+========================================================= */
+
+.facilities-eyebrow {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 8px;
+
+    color: #f36c21;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+}
+
+.facilities-eyebrow span {
+    display: block;
+
+    width: 42px;
+    height: 2px;
+
+    background: #f8ccb7;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.facilities-heading {
+    position: relative;
+    z-index: 5;
+
+    text-align: center;
+}
+
+.facilities-heading h2 {
+    margin: 0;
+
+    color: #252525;
+
+    font-size: 42px;
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+.facilities-heading h2 span {
+    color: #f36c21;
+}
+
+.facilities-heading p {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 12px auto 0;
+
+    padding: 0;
+
+    color: #777777;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HEADING DIVIDER
+========================================================= */
+
+.facilities-divider {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin: 17px auto 32px;
+}
+
+.facilities-divider span {
+    display: block;
+
+    width: 36px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #f8d3c1;
+}
+
+.facilities-divider b {
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #f36c21;
+}
+
+
+/* =========================================================
+   CARDS ROW
+========================================================= */
+
+.facilities-cards-row {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD COLUMN
+========================================================= */
+
+.facility-column {
+    width: 300px;
+
+    flex: 0 0 300px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FACILITY CARD
+========================================================= */
+
+.facility-card {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 435px;
+
+    padding: 18px 20px 30px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 17px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.055);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.facility-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 13px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.facility-image {
+    position: relative;
+
+    width: 100%;
+    height: 175px;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   IMAGE HALO
+========================================================= */
+
+.facility-image-circle {
+    width: 165px;
+    height: 165px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff0e7 0%,
+            #fff7f2 55%,
+            rgba(255,255,255,0) 72%
+        );
+}
+
+
+/* =========================================================
+   FACILITY IMAGE
+========================================================= */
+
+.facility-image-circle img {
+    display: block;
+
+    width: 140px;
+    height: 140px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   DECORATIVE PLUS
+========================================================= */
+
+.facility-plus {
+    position: absolute;
+
+    color: #f5a06d;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    z-index: 2;
+}
+
+.plus-one {
+    left: 10%;
+    top: 38px;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.facility-dot {
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #fbd4bd;
+
+    z-index: 2;
+}
+
+.dot-one {
+    right: 11%;
+    top: 27px;
+}
+
+.dot-two {
+    left: 14%;
+    bottom: 5px;
+}
+
+
+/* =========================================================
+   OUTLINE CIRCLE
+========================================================= */
+
+.facility-circle-outline {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    right: 8%;
+    top: 55px;
+
+    border: 3px solid #f8d5c1;
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.facility-card h3 {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    min-height: 50px;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #ed571d;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TITLE DIVIDER
+========================================================= */
+
+.facility-small-divider {
+    position: relative;
+
+    z-index: 5;
+
+    width: 40px;
+    height: 3px;
+
+    margin: 4px auto 8px;
+
+    border-radius: 10px;
+
+    background: #f36c21;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.facility-card p {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    max-width: 260px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ORANGE BOTTOM WAVE
+========================================================= */
+
+.facility-wave {
+    position: absolute;
+
+    z-index: 1;
+
+    left: -15%;
+    bottom: -70px;
+
+    width: 130%;
+    height: 105px;
+
+    background: #ffeadc;
+
+    border-radius:
+        50% 50% 0 0 /
+        42% 42% 0 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BACKGROUND DOT PATTERN
+========================================================= */
+
+.facility-background-dots {
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    opacity: 0.6;
+
+    background-image:
+        radial-gradient(
+            #f5b18c 1.4px,
+            transparent 1.4px
+        );
+
+    background-size: 13px 13px;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.dots-left {
+    left: 25px;
+    top: 25px;
+}
+
+.dots-right {
+    right: 25px;
+    bottom: 40px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .facilities-cards-row {
+        max-width: 1000px;
+        gap: 20px;
+    }
+
+    .facility-column {
+        width: 300px;
+        flex: 0 0 300px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .hospital-facilities-section {
+        padding: 50px 20px 65px;
+    }
+
+    .facilities-cards-row {
+        max-width: 680px;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .facility-column {
+        width: 300px;
+        flex: 0 0 300px;
+    }
+
+    .facility-card {
+        height: 425px;
+    }
+
+    .facilities-heading h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .hospital-facilities-section {
+        padding: 40px 15px 55px;
+    }
+
+
+    /* Header */
+
+    .facilities-eyebrow {
+        gap: 9px;
+
+        font-size: 11px;
+    }
+
+    .facilities-eyebrow span {
+        width: 30px;
+    }
+
+
+    .facilities-heading h2 {
+        font-size: 32px;
+    }
+
+    .facilities-heading p {
+        padding: 0 5px;
+
+        font-size: 14px;
+    }
+
+
+    /* Divider */
+
+    .facilities-divider {
+        margin-bottom: 25px;
+    }
+
+
+    /* Cards */
+
+    .facilities-cards-row {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .facility-column {
+        width: 100%;
+        max-width: 330px;
+
+        flex: none;
+    }
+
+
+    /* Card */
+
+    .facility-card {
+        width: 100%;
+
+        height: 420px;
+
+        padding: 20px 20px 30px;
+
+        margin: 0;
+    }
+
+
+    /* Image */
+
+    .facility-image {
+        height: 175px;
+    }
+
+    .facility-image-circle {
+        width: 165px;
+        height: 165px;
+    }
+
+    .facility-image-circle img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    /* Title */
+
+    .facility-card h3 {
+        font-size: 20px;
+    }
+
+
+    /* Description */
+
+    .facility-card p {
+        max-width: 270px;
+
+        font-size: 14px;
+    }
+
+
+    /* Hide background dots */
+
+    .facility-background-dots {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hospital-facilities-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .facility-column {
+        max-width: 320px;
+    }
+
+    .facility-card {
+        height: 420px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .facility-card p {
+        max-width: 275px;
+    }
+
+}
+
+/* =========================================================
+   LANDING PAGE - AREAS OF CARE
+========================================================= */
+
+.landing-area-care {
+    position: relative;
+
+    padding: 75px 0 80px;
+
+    background: #f8fbfd;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.landing-area-care-header {
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: 0 auto 38px;
+}
+
+.landing-area-care-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #f36c21;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.landing-area-care-header h2 {
+    margin: 0;
+
+    color: #075d97;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.landing-area-care-header h2 span {
+    color: #f36c21;
+}
+
+.landing-area-care-header p {
+    max-width: 680px;
+
+    margin: 15px auto 0;
+
+    color: #687984;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.landing-area-care-slider {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   WINDOW
+========================= */
+
+.area-care-slide-window {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   TRACK
+========================= */
+
+.area-care-slide-track {
+    display: flex;
+
+    width: 100%;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* =========================
+   SLIDE
+========================= */
+
+.area-care-slide {
+    flex: 0 0 100%;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 5px 35px;
+}
+
+
+/* =========================
+   DEPARTMENT CARD
+========================= */
+
+.landing-department-card {
+    position: relative;
+
+    min-height: 230px;
+
+    padding: 30px 70px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 65px;
+}
+.landing-department-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 7px;
+
+    background: #f36c21;
+}
+
+.landing-department-card:hover {
+    text-decoration: none;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 42px rgba(0, 72, 110, 0.13);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.landing-department-icon {
+    position: relative;
+
+    width: 175px;
+    height: 175px;
+
+    flex: 0 0 175px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff1e8 0%,
+            #fff8f4 55%,
+            #ffffff 75%
+        );
+}
+
+.landing-department-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 135px;
+    height: 135px;
+
+    border: 1px solid #ffd8c4;
+
+    border-radius: 50%;
+}
+
+.landing-department-icon img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.landing-department-content {
+    position: relative;
+
+    flex: 1;
+}
+
+.landing-department-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #f36c21;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.landing-department-content h3 {
+    margin: 0;
+
+    max-width: 600px;
+
+    color: #075d97;
+
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+.landing-department-arrow {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #f36c21;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.area-care-arrow {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #075d97;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    line-height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(0, 80, 120, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.area-care-arrow:hover {
+    background: #f36c21;
+
+    transform: scale(1.08);
+}
+
+.area-care-prev {
+    left: -5px;
+}
+
+.area-care-next {
+    right: -5px;
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.landing-area-care-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    max-width: 500px;
+
+    margin: 24px auto 0;
+}
+
+.landing-area-care-dots button {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #cbdbe5;
+
+    cursor: pointer;
+
+    transition:
+        width 0.25s ease,
+        background 0.25s ease;
+}
+
+.landing-area-care-dots button.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: #f36c21;
+}
+
+
+/* =========================
+   VIEW ALL BUTTON
+========================= */
+
+.landing-area-care-button {
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+.view-all-departments-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 12px 25px;
+
+    color: #ffffff;
+
+    background: #075d97;
+
+    border: 2px solid #075d97;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.view-all-departments-btn span {
+    font-size: 18px;
+}
+
+.view-all-departments-btn:hover {
+    color: #ffffff;
+
+    background: #f36c21;
+
+    border-color: #f36c21;
+
+    text-decoration: none;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .landing-area-care {
+        padding: 60px 20px 65px;
+    }
+
+    .landing-area-care-header h2 {
+        font-size: 36px;
+    }
+
+    .landing-department-card {
+        min-height: 260px;
+
+        padding: 35px 45px;
+
+        gap: 35px;
+    }
+
+    .landing-department-icon {
+        width: 145px;
+        height: 145px;
+
+        flex-basis: 145px;
+    }
+
+    .landing-department-icon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .landing-department-content h3 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .landing-area-care {
+        padding: 50px 15px 60px;
+    }
+
+    .landing-area-care-header {
+        margin-bottom: 25px;
+    }
+
+    .landing-area-care-header h2 {
+        font-size: 30px;
+    }
+
+    .landing-area-care-header p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .landing-area-care-slider {
+        display: block;
+    }
+
+    .area-care-slide {
+        padding: 5px 0;
+    }
+
+
+    .landing-department-card {
+        min-height: 300px;
+
+        padding: 30px 25px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+    .landing-department-card::before {
+        width: 100%;
+        height: 5px;
+
+        top: 0;
+        bottom: auto;
+    }
+
+
+    .landing-department-icon {
+        width: 135px;
+        height: 135px;
+
+        flex-basis: 135px;
+    }
+
+    .landing-department-icon img {
+        width: 95px;
+        height: 95px;
+    }
+
+
+    .landing-department-content {
+        width: 100%;
+    }
+
+    .landing-department-label {
+        margin-bottom: 7px;
+    }
+
+    .landing-department-content h3 {
+        font-size: 24px;
+
+        line-height: 1.3;
+    }
+
+    .landing-department-arrow {
+        margin-top: 15px;
+
+        font-size: 13px;
+    }
+
+
+    .area-care-arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 25px;
+    }
+
+    .area-care-prev {
+        left: 3px;
+    }
+
+    .area-care-next {
+        right: 3px;
+    }
+
+
+    .landing-area-care-dots {
+        margin-top: 20px;
+
+        gap: 5px;
+    }
+
+    .landing-area-care-dots button {
+        width: 6px;
+        height: 6px;
+    }
+
+    .landing-area-care-dots button.active {
+        width: 18px;
+    }
+
+    .landing-area-care-button {
+        margin-top: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .landing-area-care-header h2 {
+        font-size: 27px;
+    }
+
+    .landing-department-card {
+        min-height: 285px;
+
+        padding: 25px 20px;
+    }
+
+    .landing-department-icon {
+        width: 120px;
+        height: 120px;
+
+        flex-basis: 120px;
+    }
+
+    .landing-department-icon img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .landing-department-content h3 {
+        font-size: 21px;
+    }
+
+}
+
+/* =========================================================
+   OUTPATIENT DEPARTMENT
+========================================================= */
+
+.opd-section {
+    padding: 80px 0;
+}
+
+/* OPD CARD */
+
+.opd-card {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    padding: 40px 50px;
+
+    background: #ffffff;
+    border: 1px solid #e5edf2;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 70, 110, 0.08);
+
+    text-decoration: none;
+    color: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.opd-card:hover {
+    text-decoration: none;
+    color: inherit;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(0, 70, 110, 0.13);
+}
+
+
+/* OPD ICON */
+
+.opd-icon {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef6fb;
+    color: #075d97;
+
+    font-size: 40px;
+}
+
+
+/* OPD CONTENT */
+
+.opd-content {
+    flex: 1;
+}
+
+.opd-content h3 {
+    margin: 0 0 12px;
+
+    color: #075d97;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.opd-content p {
+    margin: 0;
+
+    color: #5f6f78;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    max-width: 850px;
+}
+
+
+/* EXPLORE OPD */
+
+.opd-explore {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #075d97;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.opd-explore span {
+    margin-left: 7px;
+
+    font-size: 18px;
+
+    transition: margin-left 0.2s ease;
+}
+
+.opd-card:hover .opd-explore span {
+    margin-left: 12px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .opd-section {
+        padding: 55px 0;
+    }
+
+    .opd-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+
+        padding: 30px 25px;
+
+        border-radius: 16px;
+    }
+
+    .opd-icon {
+        width: 75px;
+        height: 75px;
+        min-width: 75px;
+
+        font-size: 32px;
+    }
+
+    .opd-content {
+        width: 100%;
+    }
+
+    .opd-content h3 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .opd-content p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .opd-explore {
+        margin-top: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .opd-section {
+        padding: 45px 0;
+    }
+
+    .opd-card {
+        gap: 20px;
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .opd-icon {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+
+        font-size: 28px;
+    }
+
+    .opd-content h3 {
+        font-size: 19px;
+    }
+
+    .opd-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .opd-explore {
+        font-size: 13px;
+    }
+
+    .opd-explore span {
+        font-size: 17px;
+    }
+}
+
+/* =========================================================
+   FEEDBACK SECTION
+========================================================= */
+
+.feedback-section {
+    position: relative;
+    padding: 70px 0 80px;
+    background: #f5f8fc;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.feedback-header {
+    margin-bottom: 28px;
+    padding-left: 25px;
+}
+
+.feedback-header h2 {
+    margin: 0;
+
+    color: #075d97;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.feedback-carousel {
+    position: relative;
+
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.feedback-window {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 20px 0 35px;
+}
+
+
+/* =========================================================
+   TRACK
+
+   5 real reviews + 2 cloned reviews = 7 cards
+
+   Desktop:
+   7 cards occupy 233.33% of viewport
+   Each card = 1/7 of track = 33.33% viewport
+
+   Therefore 3 cards are visible at once.
+========================================================= */
+
+.feedback-track {
+    display: flex;
+    align-items: center;
+
+    width: var(--feedback-track-width);
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   EACH SLIDE
+========================================================= */
+
+.feedback-slide {
+    flex: 0 0 var(--feedback-slide-width);
+
+    width: var(--feedback-slide-width);
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.feedback-card {
+    width: 100%;
+
+    min-height: 300px;
+
+    padding: 32px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e4ebf0;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 28px rgba(0, 50, 90, 0.11);
+
+    opacity: 0.65;
+
+    transform: scale(0.86);
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+
+/* =========================================================
+   CENTRE CARD
+========================================================= */
+
+.feedback-slide.active .feedback-card {
+
+    min-height: 370px;
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    box-shadow:
+        0 18px 42px rgba(0, 50, 90, 0.17);
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.feedback-card h3 {
+    margin: 0 0 8px;
+
+    color: #202020;
+
+    font-size: 23px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   GOOGLE REVIEW
+========================================================= */
+
+.feedback-source {
+    margin-bottom: 25px;
+
+    color: #555;
+
+    font-size: 15px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.feedback-card p {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #3f3f3f;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.feedback-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 20;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #075d97;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(0, 50, 90, 0.22);
+
+    transform: translateY(-50%);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.feedback-arrow:hover {
+
+    background: #064f80;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+.feedback-prev {
+    left: -5px;
+}
+
+.feedback-next {
+    right: -5px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.feedback-dots {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 0;
+}
+
+.feedback-dots button {
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #c5d6e0;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.feedback-dots button.active {
+
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: #075d97;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .feedback-section {
+        padding: 60px 0 70px;
+    }
+
+    .feedback-header {
+        padding-left: 15px;
+    }
+
+    .feedback-header h2 {
+        font-size: 36px;
+    }
+
+    .feedback-card {
+        padding: 28px 20px;
+    }
+
+    .feedback-card p {
+        font-size: 14px;
+    }
+
+    .feedback-arrow {
+        width: 46px;
+        height: 46px;
+
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .feedback-section {
+        padding: 50px 0 60px;
+    }
+
+    .feedback-header {
+
+        margin-bottom: 20px;
+
+        padding-left: 10px;
+    }
+
+    .feedback-header h2 {
+        font-size: 30px;
+    }
+
+
+    /* Show ONE card on mobile */
+
+    .feedback-track {
+        width: var(--feedback-mobile-track-width);
+    }
+
+    .feedback-window {
+        padding: 15px 0 25px;
+    }
+
+
+    .feedback-slide {
+
+        padding: 0 25px;
+    }
+
+
+    .feedback-card,
+    .feedback-slide.active .feedback-card {
+
+        min-height: 330px;
+
+        padding: 30px 22px;
+
+        transform: scale(1);
+    }
+
+
+    .feedback-card h3 {
+        font-size: 21px;
+    }
+
+
+    .feedback-source {
+
+        margin-bottom: 22px;
+
+        font-size: 14px;
+    }
+
+
+    .feedback-card p {
+
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .feedback-arrow {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 29px;
+    }
+
+    .feedback-prev {
+        left: 0;
+    }
+
+    .feedback-next {
+        right: 0;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .feedback-section {
+        padding: 45px 0 55px;
+    }
+
+    .feedback-header h2 {
+        font-size: 27px;
+    }
+
+    .feedback-slide {
+        padding: 0 22px;
+    }
+
+    .feedback-card,
+    .feedback-slide.active .feedback-card {
+
+        min-height: 350px;
+
+        padding: 28px 20px;
+    }
+
+    .feedback-card h3 {
+        font-size: 19px;
+    }
+
+    .feedback-card p {
+        font-size: 13.5px;
+    }
+
+    .feedback-arrow {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 26px;
+    }
+}
+
+/* =========================================================
+   AAROHI HOSPITAL FOOTER
+========================================================= */
+
+.aarohi-footer {
+    position: relative;
+    width: 100%;
+
+    background: #f5f9fc;
+
+    color: #334155;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.footer-main {
+    padding: 55px 0 45px;
+
+    border-top: 1px solid #e2edf4;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr
+        1fr;
+
+    gap: 0;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+
+.footer-column {
+    min-height: 175px;
+
+    padding: 5px 45px;
+}
+
+.footer-column:first-child {
+    padding-left: 0;
+}
+
+.footer-column:last-child {
+    padding-right: 0;
+}
+
+
+/* Vertical separators */
+
+.footer-column + .footer-column {
+    border-left: 1px solid #dbe7ee;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.footer-logo-link {
+    display: inline-block;
+
+    width: fit-content;
+
+    text-decoration: none;
+}
+
+
+.footer-logo {
+    display: block;
+
+    width: 275px;
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+.footer-tagline {
+    margin: 2px 0 12px 125px;
+
+    color: #f58220;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+.footer-brand-text {
+    max-width: 330px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.footer-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+
+.footer-heading span {
+    display: block;
+
+    width: 4px;
+    height: 25px;
+
+    border-radius: 5px;
+
+    background: #f58220;
+}
+
+
+.footer-heading h3 {
+    margin: 0;
+
+    color: #075d97;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.footer-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    color: #475569;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.footer-links a i {
+    margin-right: 7px;
+
+    color: #f58220;
+
+    font-size: 18px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.footer-links a:hover {
+    color: #075d97;
+
+    text-decoration: none;
+
+    transform: translateX(4px);
+}
+
+
+.footer-links a:hover i {
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.footer-address-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+
+.footer-address-icon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #fff1e7;
+
+    color: #f58220;
+
+    font-size: 21px;
+}
+
+
+.footer-address-box p {
+    max-width: 330px;
+
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.footer-bottom {
+    border-top: 1px solid #dbe7ee;
+
+    background: #ffffff;
+}
+
+
+.footer-bottom-content {
+    min-height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.footer-bottom span {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   SCROLL TO TOP
+========================================================= */
+
+.aarohi-footer .scroll-top {
+    position: absolute;
+
+    right: 28px;
+
+    bottom: 70px;
+
+    z-index: 50;
+}
+
+
+.aarohi-footer .scroll-top-inner {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #3978f6;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(57, 120, 246, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.aarohi-footer .scroll-top-inner:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(57, 120, 246, 0.35);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+
+        padding-bottom: 35px;
+
+        min-height: auto;
+    }
+
+    .footer-column:nth-child(2) {
+        border-left: 0;
+
+        border-top: 1px solid #dbe7ee;
+
+        padding-top: 35px;
+    }
+
+    .footer-column:nth-child(3) {
+        border-top: 1px solid #dbe7ee;
+
+        padding-top: 35px;
+    }
+
+    .footer-tagline {
+        margin-left: 125px;
+    }
+
+    .aarohi-footer .scroll-top {
+        right: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .footer-main {
+        padding: 45px 0 30px;
+    }
+
+
+    .footer-grid {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .footer-column {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 0 10px 30px;
+    }
+
+
+    .footer-column:first-child {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .footer-column:last-child {
+        padding-right: 10px;
+    }
+
+
+    .footer-column + .footer-column {
+
+        border-left: 0;
+
+        border-top: 1px solid #dbe7ee;
+
+        padding-top: 30px;
+    }
+
+
+    /* Logo */
+
+    .footer-brand {
+        align-items: center;
+
+        text-align: center;
+
+        padding-bottom: 30px;
+    }
+
+
+    .footer-logo {
+        width: 235px;
+    }
+
+
+    .footer-tagline {
+        margin: 2px 0 12px;
+
+        font-size: 13px;
+    }
+
+
+    .footer-brand-text {
+        max-width: 320px;
+
+        font-size: 13.5px;
+    }
+
+
+    /* Headings */
+
+    .footer-heading {
+        margin-bottom: 18px;
+    }
+
+
+    .footer-heading h3 {
+        font-size: 18px;
+    }
+
+
+    /* Links */
+
+    .footer-links {
+        gap: 12px;
+    }
+
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+
+    /* Address */
+
+    .footer-address-box p {
+        font-size: 14px;
+    }
+
+
+    /* Copyright */
+
+    .footer-bottom-content {
+
+        min-height: auto;
+
+        padding: 18px 10px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 5px;
+    }
+
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+
+
+    .footer-bottom span {
+        font-size: 12px;
+    }
+
+
+    /* Scroll top */
+
+    .aarohi-footer .scroll-top {
+
+        right: 15px;
+
+        bottom: 105px;
+    }
+
+
+    .aarohi-footer .scroll-top-inner {
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .footer-logo {
+        width: 215px;
+    }
+
+    .footer-brand-text {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+    .footer-address-box {
+        gap: 12px;
+    }
+
+    .footer-address-icon {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 19px;
+    }
+}

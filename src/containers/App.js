@@ -47,6 +47,7 @@ import ThoughtPaper from "../components/ThoughtPaper/ThoughtPaperLanding";
 import ThoughtPaperThankYou from "../components/ThoughtPaperThankYou/ThoughtPaperThankYouLanding";
 import ContactUs from "../components/ContactUs/ContactUs";
 import BookAppointment from "../components/BookAppointment/BookAppointment";
+import OutpatientDepartment from "../components/Services/SubPages/OutPatient";
 import AppointmentThankYou from "../components/BookAppointment/Thankyou";
 import Thankyou from "../components/ContactUs/Thankyou";
 import Thanks from "../components/ContactUs/Thanks";
@@ -58,7 +59,7 @@ import InternetCompanies from "../components/Industries/SubPages/InternetCompani
 import Matrimonial from "../components/Industries/SubPages/Matrimonial";
 import Dating from "../components/Industries/SubPages/Dating";
 import Rental from "../components/Industries/SubPages/Rental";
-import Technology from "../components/Doctors/Doctors";
+import Doctors from "../components/Doctors/Doctors";
 import Footer from "../components/Footer/Footer";
 import FAQ from "../components/FAQ's/FAQ";
 import BlogDetails1 from "../components/Blog/BlogDetails1";
@@ -138,6 +139,7 @@ const App = () => {
                             <Route path='/psychiatry' element={<Psychiatry/>}/>
                             <Route path='/emergency-care' element={<EmergencyCare/>}/>
                             <Route path='/physiotherapy' element={<Physiotherapy/>}/>
+                            <Route path='/outpatient-department' element={<OutpatientDepartment/>}/>
                             <Route path='/pharmacy' element={<Pharmacy/>}/>
                             <Route path='/dialysis' element={<Dialysis/>}/>
                             <Route path='/gynaecology' element={<Gynaecology/>}/>
@@ -183,7 +185,7 @@ const App = () => {
                             <Route path='/The-Rising-Threat-of-AI-and-Deep-Fakes-in-Job-Interviews' element={<BlogDetails21 />} />
                             <Route path='/Recognizing-Employee-Fraud-Types-to-Safeguard-Your-Business' element={<BlogDetails22 />} />
                             <Route path='/The-business-of-impersonation-and-how-it-affects-yours' element={<BlogDetails23 />} />
-                            <Route path='/technology' element={<Technology />} />
+                            <Route path='/doctors' element={<Doctors />} />
                             <Route path='/privacy' element={<PrivacyPolicy />} />
                             <Route path='/tnc' element={<TermsOfUse />} />
                         </Routes>

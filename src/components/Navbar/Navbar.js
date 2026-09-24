@@ -324,7 +324,7 @@ const Navbar = () => {
                                 AREA OF CARE
                             </Link>
                         </li>
-                        <li><Link to="/technology">DOCTORS</Link></li>
+                        <li><Link to="/doctors">DOCTORS</Link></li>
 
 
                         {/* <li>

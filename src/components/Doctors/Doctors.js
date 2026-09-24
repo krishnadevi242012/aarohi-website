@@ -630,11 +630,6 @@ const Landing = () => {
                                                 <i className="mdi mdi-account-doctor"></i>
                                             </div>
 
-                                            <div className="doctor-number">
-                                                {String(
-                                                    department.doctors.indexOf(doctor) + 1
-                                                ).padStart(2, "0")}
-                                            </div>
                                         </div>
 
                                         <div className="doctor-card-body">

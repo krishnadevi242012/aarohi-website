@@ -1261,6 +1261,34 @@ button:focus, button:active {
   z-index: 1;
 }
 
+.outpatient-background {
+  background-image: url("/images/services/opd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px !important;
+}
+
+.outpatient-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Keep content above overlay */
+.outpatient-background .container {
+  position: relative;
+  z-index: 1;
+}
+
 .physiotherapy-background {
   background-image: url("/images/services/physiotherapy.jpeg");
   background-size: cover;

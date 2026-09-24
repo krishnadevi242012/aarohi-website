@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import axios from "axios";
 import { Button, Form, Modal } from "react-bootstrap";
@@ -7,9 +7,15 @@ import { Button, Form, Modal } from "react-bootstrap";
 
 
 const Landing = () => {
+    const navigate = useNavigate();
+
     const [showModal, setShowModal] = useState(false);
     const [activeButton, setactiveButton] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [areaCareSlide, setAreaCareSlide] = useState(0);
+    const [feedbackSlide, setFeedbackSlide] = useState(0);
+    const [feedbackPosition, setFeedbackPosition] = useState(1);
+    const [feedbackTransition, setFeedbackTransition] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -18,7 +24,218 @@ const Landing = () => {
 
         return () => clearInterval(interval);
     }, []);
+    useEffect(() => {
+        const areaCareInterval = setInterval(() => {
+            setAreaCareSlide((prev) =>
+                (prev + 1) % areaCareDepartments.length
+            );
+        }, 4500);
 
+        return () => clearInterval(areaCareInterval);
+    }, []);
+
+    const areaCareDepartments = [
+        {
+            name: "General Medicine",
+            path: "/general-medicine-cardiac-care",
+            icon: "images/landing/icons/1.png"
+        },
+        {
+            name: "General Surgery",
+            path: "/general-laparoscopic-surgery",
+            icon: "images/landing/icons/5.png"
+        },
+        {
+            name: "Obstetrics & Gynaecology",
+            path: "/obstetrics-gynaecology",
+            icon: "images/landing/icons/2.png"
+        },
+        {
+            name: "Paediatrics",
+            path: "/paediatrics",
+            icon: "images/landing/icons/7.png"
+        },
+        {
+            name: "Orthopaedics & Trauma Care",
+            path: "/orthopedics",
+            icon: "images/landing/icons/6.png"
+        },
+        {
+            name: "Cardiology",
+            path: "/cardiology",
+            icon: "images/landing/icons/25.png"
+        },
+        {
+            name: "CTVS & Endovascular Surgery",
+            path: "/vascular-surgery",
+            icon: "images/landing/icons/21.png"
+        },
+        {
+            name: "Neurology",
+            path: "/neurology",
+            icon: "images/landing/icons/13.png"
+        },
+        {
+            name: "Neurosurgery",
+            path: "/neurosurgery",
+            icon: "images/landing/icons/8.png"
+        },
+        {
+            name: "Nephrology",
+            path: "/nephrology",
+            icon: "images/landing/icons/14.png"
+        },
+        {
+            name: "Urology",
+            path: "/urology",
+            icon: "images/landing/icons/15.png"
+        },
+        {
+            name: "Respiratory Medicine",
+            path: "/pulmonology",
+            icon: "images/landing/icons/22.png"
+        },
+        {
+            name: "Medical & Surgical Gastroenterology",
+            path: "/medical-gastroenterology",
+            icon: "images/landing/icons/16.png"
+        },
+        {
+            name: "Plastic Surgery",
+            path: "/plastic-surgery",
+            icon: "images/landing/icons/26.png"
+        },
+        {
+            name: "ENT (Ear, Nose & Throat)",
+            path: "/ent",
+            icon: "images/landing/icons/11.png"
+        },
+        {
+            name: "Dermatology",
+            path: "/dermatology",
+            icon: "images/landing/icons/9.png"
+        },
+        {
+            name: "Psychiatry",
+            path: "/psychiatry",
+            icon: "images/landing/icons/12.png"
+        },
+        {
+            name: "Medical Oncology",
+            path: "/medical-oncology",
+            icon: "images/landing/icons/19.png"
+        },
+        {
+            name: "Surgical Oncology",
+            path: "/surgical-oncology",
+            icon: "images/landing/icons/20.png"
+        },
+        {
+            name: "Anaesthesia & Critical Care",
+            path: "/anaesthesiology",
+            icon: "images/landing/icons/10.png"
+        },
+        {
+            name: "Outpatient Department",
+            path: "/outpatient-department",
+            icon: "images/landing/icons/2.png"
+        }
+    ];
+
+    const feedbacks = [
+        {
+            name: "Ushashree K",
+            review:
+                "My experience at the hospital was truly reassuring. The doctors were kind, patient, and took the time to explain everything in a calm and caring manner. The nursing and support staff were attentive and compassionate, always ready to help. The hospital was clean, comfortable, and well organised, which added to the sense of ease during the visit. I am very grateful for the care and support provided throughout."
+        },
+        {
+            name: "Rishit Jain",
+            review:
+                "My friend was admitted in Aarohi Hospital and the desk staff and the doctors were very friendly and the service was amazing."
+        },
+        {
+            name: "Rajesh Krishna",
+            review:
+                "Right from the registration and casualty till the discharge treatment was amazing. The housekeeping staff was very approachable."
+        },
+        {
+            name: "Prity Das",
+            review:
+                "Admitted in Aarohi Hospital for surgery and it went well. Doctors and nurses are very professional, kind and caring. I had a very satisfactory experience at Aarohi Hospital. All the supportive staff are courteous and helpful at every stage of my admission."
+        },
+        {
+            name: "Renuka Raju",
+            review:
+                "Good hospital in the location, doctors and staff are very kind and good. Hospital is very clean and hygienic. Highly recommended."
+        }
+    ];
+
+    const feedbackItems = [
+    feedbacks[feedbacks.length - 1],
+    ...feedbacks,
+    feedbacks[0]
+];
+
+const nextFeedback = () => {
+    setFeedbackTransition(true);
+
+    setFeedbackPosition((prev) => prev + 1);
+
+    setFeedbackSlide(
+        (prev) => (prev + 1) % feedbacks.length
+    );
+};
+
+const prevFeedback = () => {
+    setFeedbackTransition(true);
+
+    setFeedbackPosition((prev) => prev - 1);
+
+    setFeedbackSlide(
+        (prev) =>
+            (prev - 1 + feedbacks.length) %
+            feedbacks.length
+    );
+};
+
+const goToFeedback = (index) => {
+    setFeedbackTransition(true);
+
+    setFeedbackPosition(index + 1);
+
+    setFeedbackSlide(index);
+};
+
+const handleFeedbackTransitionEnd = () => {
+
+    if (feedbackPosition === feedbackItems.length - 1) {
+
+        setFeedbackTransition(false);
+        setFeedbackPosition(1);
+
+    } else if (feedbackPosition === 0) {
+
+        setFeedbackTransition(false);
+        setFeedbackPosition(feedbacks.length);
+    }
+};
+useEffect(() => {
+
+    const feedbackInterval = setInterval(() => {
+
+        setFeedbackTransition(true);
+
+        setFeedbackPosition((prev) => prev + 1);
+
+        setFeedbackSlide(
+            (prev) => (prev + 1) % feedbacks.length
+        );
+
+    }, 5000);
+
+    return () => clearInterval(feedbackInterval);
+
+}, []);
     const handleClose = () => {
         setShowModal(false);
     }
@@ -198,578 +415,375 @@ const Landing = () => {
             </div>
 
 
-            {/* CT / MRI Section */}
-            <div className="about-section bg-white pt-100 pb-70">
+            {/* =========================================================
+    AAROHI HOSPITAL - FACILITIES
+========================================================= */}
+
+            <section className="hospital-facilities-section">
+
                 <div className="container">
-                    <div className="row align-items-center">
 
-                        {/* Content */}
-                        <div className="col-lg-6 pb-30">
-                            <div className="about-section-item about-item-details">
+                    {/* =========================
+            SECTION HEADER
+        ========================= */}
 
-                                <div className="section-title section-title-left text-start">
-                                    <h3 className="c-red">
-                                        CT / MRI
-                                    </h3>
+                    <div className="facilities-eyebrow">
+                        <span></span>
+                        OUR FACILITIES
+                        <span></span>
+                    </div>
+
+                    <div className="facilities-heading">
+
+                        <h2>
+                            World-Class <span>Facilities</span>
+                        </h2>
+
+                        <p>
+                            Modern infrastructure and comprehensive healthcare facilities
+                            designed to provide safe, comfortable and quality patient care.
+                        </p>
+
+                    </div>
+
+                    <div className="facilities-divider">
+                        <span></span>
+                        <b></b>
+                        <span></span>
+                    </div>
+
+
+                    {/* =========================
+            FACILITY CARDS
+        ========================= */}
+
+                    <div className="facilities-cards-row">
+
+
+                        {/* =========================
+                CARD 1
+            ========================= */}
+
+                        <div className="facility-column">
+
+                            <div
+                                className="facility-card"
+                                onClick={() => navigate("/modular-ot")}
+                                style={{ cursor: "pointer" }}
+                            >
+
+                                <div className="facility-image">
+
+                                    <span className="facility-plus plus-one">+</span>
+
+                                    <span className="facility-dot dot-one"></span>
+                                    <span className="facility-dot dot-two"></span>
+
+                                    <span className="facility-circle-outline"></span>
+
+                                    <div className="facility-image-circle">
+
+                                        <img
+                                            src="images\landing\facilities\modular-operation-theatre.png"
+                                            alt="Modular Operation Theatre"
+                                        />
+
+                                    </div>
+
                                 </div>
 
-                                <div className="about-content">
-                                    <p className="text-black">
-                                        When it comes to your health, every detail matters.
-                                    </p>
 
-                                    <p className="text-black">
-                                        Advanced CT and MRI imaging provides doctors with clear, detailed insights into the body, helping them detect, evaluate, and monitor a wide range of medical conditions. From identifying abnormalities at an early stage to assessing complex conditions and monitoring treatment progress, accurate imaging plays an important role in making informed healthcare decisions.
-                                    </p>
+                                <h3>
+                                    Modular Operation Theatre
+                                </h3>
 
-                                    <p className="text-black">
-                                        At Aarohi Hospital, we combine advanced imaging technology with experienced medical expertise to deliver reliable and precise diagnostic support. Our focus is on providing high-quality imaging in a comfortable and patient-friendly environment, helping doctors plan the most appropriate treatment for every patient.
-                                    </p>
+                                <div className="facility-small-divider"></div>
 
-                                    <p className="text-black">
-                                        Because better imaging leads to better-informed decisions, and better-informed decisions lead to better care.
-                                    </p>
+                                <p>
+                                    Advanced operation theatre facilities designed to
+                                    support safe, efficient and well-controlled surgical
+                                    procedures.
+                                </p>
 
-                                </div>
+                                <div className="facility-wave"></div>
 
                             </div>
+
                         </div>
 
-                        {/* Image */}
-                        <div className="col-lg-6 pb-30">
-                            <div className="about-section-item about-item-image text-center">
-                                <img
-                                    src="images/landing/image-02.jpg"
-                                    alt="CT / MRI"
-                                    className="shadow-2xl"
-                                />
+
+                        {/* =========================
+                CARD 2
+            ========================= */}
+
+                        <div className="facility-column">
+
+                            <div
+                                className="facility-card"
+                                onClick={() => navigate("/physiotherapy")}
+                                style={{ cursor: "pointer" }}
+                            >
+
+                                <div className="facility-image">
+
+                                    <span className="facility-plus plus-one">+</span>
+
+                                    <span className="facility-dot dot-one"></span>
+                                    <span className="facility-dot dot-two"></span>
+
+                                    <span className="facility-circle-outline"></span>
+
+                                    <div className="facility-image-circle">
+
+                                        <img
+                                            src="\images\landing\facilities\physiotherapy.png"
+                                            alt="Physiotherapy"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+
+                                <h3>
+                                    Physiotherapy
+                                </h3>
+
+                                <div className="facility-small-divider"></div>
+
+                                <p>
+                                    Dedicated physiotherapy and rehabilitation services
+                                    supporting recovery, mobility and improved physical
+                                    function.
+                                </p>
+
+                                <div className="facility-wave"></div>
+
                             </div>
+
+                        </div>
+
+
+                        {/* =========================
+                CARD 3
+            ========================= */}
+
+                        <div className="facility-column">
+
+                            <div
+                                className="facility-card"
+                                onClick={() => navigate("/pharmacy")}
+                                style={{ cursor: "pointer" }}
+                            >
+
+                                <div className="facility-image">
+
+                                    <span className="facility-plus plus-one">+</span>
+
+                                    <span className="facility-dot dot-one"></span>
+                                    <span className="facility-dot dot-two"></span>
+
+                                    <span className="facility-circle-outline"></span>
+
+                                    <div className="facility-image-circle">
+
+                                        <img
+                                            src="\images\landing\facilities\pharmacy.png"
+                                            alt="24x7 Pharmacy"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+
+                                <h3>
+                                    24×7 Pharmacy
+                                </h3>
+
+                                <div className="facility-small-divider"></div>
+
+                                <p>
+                                    Convenient access to essential medicines and
+                                    pharmaceutical support for patients whenever needed.
+                                </p>
+
+                                <div className="facility-wave"></div>
+
+                            </div>
+
                         </div>
 
                     </div>
+
                 </div>
-            </div>
+
+            </section>
 
 
-            <div className="testimonial-section position-relative">
-                <div className="container-fluid pt-5 pb-3 bg-off-white">
-                    <div className="row">
-                        <h1 className="c-red font-weight-bolder pl-80">AREAS OF CARE</h1>
+            {/* =========================================================
+    AREAS OF CARE
+========================================================= */}
+
+            <section className="landing-area-care">
+
+                <div className="container">
+
+                    {/* HEADER */}
+
+                    <div className="landing-area-care-header">
+
+                        <span className="landing-area-care-label">
+                            OUR AREAS OF CARE
+                        </span>
+
+                        <h2>
+                            Expertise You Can <span>Count On</span>
+                        </h2>
+
+                        <p>
+                            Experienced medical professionals and specialised
+                            healthcare services supporting patients across a wide
+                            range of healthcare needs.
+                        </p>
+
                     </div>
-                    <div className="client-carousel default-carousel owl-carousel owl-theme owl-loaded owl-drag">
-                        <div className="owl-stage-outer pt-0">
-                            <div className="owl-stage">
-                                <div className="owl-item" >
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <Link to="/Impersonation-is-big-business-and-it-can-ruin-yours"
-                                                        className="btn">
-                                                        <div className="card shadow-2xl border-0">
-                                                            {/* <h4 className="color-white mt-3"></h4> */}
-                                                            <img className="card-img-top px-5 pt-2"
-                                                                src="images/landing/icons/1.png"
-                                                                alt="" />
-                                                            <div className="card-body">
-                                                                <h6 className="card-title">General Medicine & Cardiac Care</h6>
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                </div>
+
+
+                    {/* SLIDER */}
+
+                    <div className="landing-area-care-slider">
+
+                        <button
+                            type="button"
+                            className="area-care-arrow area-care-prev"
+                            onClick={() =>
+                                setAreaCareSlide(
+                                    (prev) =>
+                                        (prev - 1 + areaCareDepartments.length) %
+                                        areaCareDepartments.length
+                                )
+                            }
+                            aria-label="Previous department"
+                        >
+                            ‹
+                        </button>
+
+
+                        <div className="area-care-slide-window">
+
+                            <div
+                                className="area-care-slide-track"
+                                style={{
+                                    transform: `translateX(-${areaCareSlide * 100}%)`
+                                }}
+                            >
+
+                                {areaCareDepartments.map((department, index) => (
+
+                                    <div
+                                        className="area-care-slide"
+                                        key={department.path}
+                                    >
+
+                                        <Link
+                                            to={department.path}
+                                            className="landing-department-card"
+                                        >
+
+                                            <div className="landing-department-icon">
+
+                                                <img
+                                                    src={department.icon}
+                                                    alt={department.name}
+                                                />
+
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <Link to="/Impersonation-is-big-business-and-it-can-ruin-yours"
-                                                        className="btn">
-                                                        <div className="card shadow-2xl border-0">
-                                                            {/* <h4 className="color-white mt-3">Blog</h4> */}
-                                                            <img className="card-img-top px-5 pt-2"
-                                                                src="images/landing/icons/2.png"
-                                                                alt="" />
-                                                            <div className="card-body">
-                                                                <h6 className="card-title">Preventive Health Check-ups & Wellness Care</h6>
 
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                </div>
+                                            <div className="landing-department-content">
+
+                                                <span className="landing-department-label">
+
+                                                </span>
+
+                                                <h3>
+                                                    {department.name}
+                                                </h3>
+
+                                                <span className="landing-department-arrow">
+                                                    Explore Department →
+                                                </span>
+
                                             </div>
-                                        </div>
+
+                                        </Link>
+
                                     </div>
-                                </div>
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/3.png"
-                                                            alt="Blog" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Emergency & Critical Care</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                ))}
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/4.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Diagnostics & Imaging Services</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/5.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">General & Laparoscopic Surgery</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/6.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Neonatology & Newborn Care</h6>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/7.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Paediatrics</h6>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/8.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Neurosurgery</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/9.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Dermatology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/10.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Anaesthesiology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/11.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">ENT (Ear, Nose & Throat)</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/12.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Pain Management</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/13.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Neurology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/14.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Nephrology & Dialysis</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/15.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Urology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/16.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Medical Gastroenterology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/17.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Surgical Gastroenterology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/18.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Paediatric Surgery</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/19.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Medical Oncology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/20.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Surgical Oncology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/21.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Vascular Surgery</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/22.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Pulmonology (Chest Medicine)</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/23.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">OMFS (Oral & Maxillofacial Surgery)</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/24.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Cosmetology & Aesthetic Medicine</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/25.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Cardiology</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <img className="card-img-top px-5 pt-2"
-                                                            src="images/landing/icons/26.png"
-                                                            alt="" />
-                                                        <div className="card-body">
-                                                            <h6 className="card-title">Plastic & Reconstructive Surgery</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+                        </div>
+
+
+                        <button
+                            type="button"
+                            className="area-care-arrow area-care-next"
+                            onClick={() =>
+                                setAreaCareSlide(
+                                    (prev) =>
+                                        (prev + 1) %
+                                        areaCareDepartments.length
+                                )
+                            }
+                            aria-label="Next department"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+
+                    {/* DOTS */}
+
+                    <div className="landing-area-care-dots">
+
+                        {areaCareDepartments.map((department, index) => (
+
+                            <button
+                                key={department.path}
+                                type="button"
+                                className={
+                                    areaCareSlide === index ? "active" : ""
+                                }
+                                onClick={() => setAreaCareSlide(index)}
+                                aria-label={`Go to ${department.name}`}
+                            />
+
+                        ))}
+
+                    </div>
+
+
+                    {/* VIEW ALL */}
+
+                    <div className="landing-area-care-button">
+
+                        <Link
+                            to="/area-of-care"
+                            className="view-all-departments-btn"
+                        >
+                            View All Departments
+                            <span>→</span>
+                        </Link>
+
+                    </div>
+
+                </div>
+
+            </section>
 
             <div className="about-section bg-white pt-5 pb-30">
                 <div className="container">
@@ -793,179 +807,140 @@ const Landing = () => {
                 </div>
             </div>
 
-            {/* <div className="testimonial-section position-relative">
-                <div className="container-fluid py-5 bg-white">
-                    <div className="row">
-                        <h1 className="c-blue font-weight-bolder pl-80">Client list</h1>
-                    </div>
-
-                    <div className="row">
-                        <div className="container p-0">
-                            <div className="row m-0">
-                                <div className="col-md-12 d-md-flex justify-content-md-center">
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/amazon.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/conduent.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/icici.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/hdfclife.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/infosys.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/logo-without_punch_line.png" className="img-fluid" />
-                                    </div>
-                                </div>
-
-                                <div className="col-md-12 d-md-flex justify-content-md-center">
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/outsource.jpg" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/quess.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/sbilife.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/tatamotors.png" className="img-fluid" />
-                                    </div>
-                                    <div className="col-md-2 d-flex align-items-center justify-content-center border shadow-sm m-1 mb-2 p-2">
-                                        <img src="images/landing/clients/xoriant.png" className="img-fluid" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
 
 
-            <div className="testimonial-section position-relative">
-                <div className="container-fluid pt-5 pb-3 bg-off-white">
-                    <div className="row">
-                        <h1 className="c-blue font-weight-bolder pl-80">FEEDBACKS</h1>
-                    </div>
-                    <div className="blog-carousel default-carousel owl-carousel owl-theme owl-loaded owl-drag">
-                        <div className="owl-stage-outer pt-0">
-                            <div className="owl-stage">
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <div className="card-body">
-                                                            <h5 className="card-title">Ushashree K</h5>
-                                                            <i className="card-title">Google Review</i>
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <p className="card-title">My experience at the hospital was truly reassuring. The doctors were kind, patient, and took the time to explain everything in a calm and caring manner. The nursing and support staff were attentive and compassionate, always ready to help. The hospital was clean, comfortable, and well organised, which added to the sense of ease during the visit. I am very grateful for the care and support provided throughout.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* =========================================================
+    FEEDBACK / TESTIMONIALS
+========================================================= */}
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <div className="card-body">
-                                                            <h5 className="card-title">Rishit Jain</h5>
-                                                            <i className="card-title">Google Review</i>
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <p className="card-title">My friend was admitted in aarohi hospital and the desk staff and the doctors were very friendly and the service was amazing.</p>
+<section className="feedback-section">
 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    <div className="container">
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <div className="card-body">
-                                                            <h5 className="card-title">Rajesh Krishna</h5>
-                                                            <i className="card-title">Google Review</i>
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <p className="card-title">Right from the registration and casualty till the discharge treatment was amazing, right from housekeeping staff was very approachable.</p>
+        {/* HEADER */}
 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <div className="feedback-header">
+            <h2>FEEDBACKS</h2>
+        </div>
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <div className="card-body">
-                                                            <h5 className="card-title">Prity Das</h5>
-                                                            <i className="card-title">Google Review</i>
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <p className="card-title">Admitted in aarohi hospital for surgery and it went well. Doctors and nurses are very professional, kind and caring. I had a very satisfactory experience at aarohi hosptal. All the supportive staffs are courteous and helpful at every stage of my admission. I truly appreciate and highly recommend to others to quality care and overall services.</p>
 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        {/* CAROUSEL */}
 
-                                <div className="owl-item">
-                                    <div className="item">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="blog">
-                                                    <div className="card shadow-2xl border-0">
-                                                        <div className="card-body">
-                                                            <h5 className="card-title">Renuka Raju</h5>
-                                                            <i className="card-title">Google Review</i>
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <p className="card-title">Good hospital in the location, doctors and staff are very kind and good. Hospital is very clean and hygienic. Highly recommended</p>
+        <div className="feedback-carousel">
 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* PREVIOUS */}
 
+            <button
+                type="button"
+                className="feedback-arrow feedback-prev"
+                onClick={prevFeedback}
+                aria-label="Previous feedback"
+            >
+                ‹
+            </button>
+
+
+            {/* VIEWPORT */}
+
+            <div className="feedback-window">
+
+                <div
+                    className="feedback-track"
+                    onTransitionEnd={handleFeedbackTransitionEnd}
+                    style={{
+                        "--feedback-position": feedbackPosition,
+                        "--feedback-slide-width":
+                            `${100 / feedbackItems.length}%`,
+                        "--feedback-track-width":
+                            `${(feedbackItems.length / 3) * 100}%`,
+                        "--feedback-mobile-track-width":
+                            `${feedbackItems.length * 100}%`,
+                        transition: feedbackTransition
+                            ? "transform 0.6s ease-in-out"
+                            : "none",
+                        transform:
+                            `translateX(-${
+                                (feedbackPosition - 1) *
+                                (100 / feedbackItems.length)
+                            }%)`
+                    }}
+                >
+
+                    {feedbackItems.map((feedback, index) => (
+
+                        <div
+                            className={`feedback-slide ${
+                                index === feedbackPosition
+                                    ? "active"
+                                    : ""
+                            }`}
+                            key={`${feedback.name}-${index}`}
+                        >
+
+                            <div className="feedback-card">
+
+                                <h3>
+                                    {feedback.name}
+                                </h3>
+
+                                <span className="feedback-source">
+                                    Google Review
+                                </span>
+
+                                <p>
+                                    {feedback.review}
+                                </p>
 
                             </div>
+
                         </div>
-                    </div>
+
+                    ))}
+
                 </div>
+
             </div>
 
+
+            {/* NEXT */}
+
+            <button
+                type="button"
+                className="feedback-arrow feedback-next"
+                onClick={nextFeedback}
+                aria-label="Next feedback"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        {/* DOTS */}
+
+        <div className="feedback-dots">
+
+            {feedbacks.map((feedback, index) => (
+
+                <button
+                    key={feedback.name}
+                    type="button"
+                    className={
+                        feedbackSlide === index
+                            ? "active"
+                            : ""
+                    }
+                    onClick={() => goToFeedback(index)}
+                    aria-label={`Go to feedback ${index + 1}`}
+                />
+
+            ))}
+
+        </div>
+
+    </div>
+
+</section>
 
         </section>
     );

@@ -91,6 +91,9 @@ const AreaOfCare = () => {
     ];
 
 
+
+
+
     /* =====================================================
        DIAGNOSTIC & CLINICAL SERVICES
        ===================================================== */
@@ -284,9 +287,6 @@ const AreaOfCare = () => {
 
                             const cardContent = (
                                 <>
-                                    <div className="speciality-number">
-                                        {String(index + 1).padStart(2, "0")}
-                                    </div>
 
                                     <div className="speciality-icon">
                                         <i className="mdi mdi-medical-bag"></i>
@@ -328,6 +328,50 @@ const AreaOfCare = () => {
 
             </section>
 
+            {/* =================================================
+    OUTPATIENT DEPARTMENT
+================================================= */}
+            <section className="care-service-section opd-section">
+                <div className="container">
+
+                    <div className="care-section-heading">
+                        <div className="care-heading-icon">
+                            <i className="mdi mdi-account-multiple"></i>
+                        </div>
+
+                        <div>
+                            <span className="area-section-label">
+                                OUTPATIENT CARE
+                            </span>
+
+                            <h2>Outpatient Department</h2>
+                        </div>
+                    </div>
+
+                    <Link
+                        to="/outpatient-department"
+                        className="opd-card"
+                    >
+                        <div className="opd-icon">
+                            <i className="mdi mdi-hospital-building"></i>
+                        </div>
+
+                        <div className="opd-content">
+                            <h3>Outpatient Department (OPD)</h3>
+
+                            <p>
+                                Consult experienced doctors across multiple
+                                medical specialities through our outpatient
+                                services. Our OPD provides convenient access
+                                to consultations, diagnosis, follow-up care
+                                and treatment planning.
+                            </p>
+
+                        </div>
+                    </Link>
+
+                </div>
+            </section>
 
             {/* =================================================
                 DIAGNOSTIC & CLINICAL SERVICES
@@ -378,9 +422,6 @@ const AreaOfCare = () => {
                                         </p>
                                     </div>
 
-                                    <div className="service-card-number">
-                                        0{index + 1}
-                                    </div>
                                 </>
                             );
 
@@ -459,9 +500,6 @@ const AreaOfCare = () => {
                                         </p>
                                     </div>
 
-                                    <div className="service-card-number">
-                                        0{index + 1}
-                                    </div>
                                 </>
                             );
 
@@ -554,7 +592,7 @@ const AreaOfCare = () => {
                 HOSPITAL FACILITIES
                ================================================= */}
 
-            <section className="facilities-section">
+            {/* <section className="facilities-section">
 
                 <div className="container">
 
@@ -627,7 +665,7 @@ const AreaOfCare = () => {
                 </div>
 
             </section>
-
+ */}
 
             {/* =================================================
                 CTA
