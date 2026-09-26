@@ -124,7 +124,7 @@ const Navbar = () => {
                                     </li>
                                     <li>
                                         <Link
-                                            to="/technology"
+                                            to="/doctors"
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
                                             DOCTORS
