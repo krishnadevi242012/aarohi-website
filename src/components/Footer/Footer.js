@@ -84,8 +84,8 @@ const Footer = () => {
 
 
                         {/* =================================================
-                            ADDRESS
-                        ================================================= */}
+    ADDRESS
+================================================= */}
 
                         <div className="footer-column footer-address-column">
 
@@ -104,6 +104,19 @@ const Footer = () => {
                                     Site no, 81/2, Uttarahalli Main Rd,
                                     near Kodipalya, Kengeri, Bengaluru,
                                     Karnataka 560060
+                                </p>
+
+                            </div>
+
+                            {/* EMAIL */}
+                            <div className="footer-email-box">
+
+                                <div className="footer-email-icon">
+                                    <i className="mdi mdi-email-outline"></i>
+                                </div>
+
+                                <p>
+                                    aarohihospitaladmn2025@gmail.com
                                 </p>
 
                             </div>

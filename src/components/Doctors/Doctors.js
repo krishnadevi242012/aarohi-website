@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const departments = [
+export const departments = [
     {
         name: "General Medicine",
         icon: "mdi mdi-stethoscope",
@@ -610,7 +610,7 @@ const Landing = () => {
 
                                 <div>
                                     <span>
-                                        DEPARTMENT {String(departmentIndex + 1).padStart(2, "0")}
+                                        SPECIALITY
                                     </span>
 
                                     <h2>{department.name}</h2>

@@ -229,7 +229,7 @@ const AreaOfCare = () => {
                     <div className="area-care-intro-inner">
 
                         <span className="area-section-label">
-                            OUR AREAS OF CARE
+                            OUR SPECIALITIES
                         </span>
 
                         <h2>
@@ -268,9 +268,9 @@ const AreaOfCare = () => {
 
                         <div>
 
-                            <span className="area-section-label">
+                            {/* <span className="area-section-label">
                                 CLINICAL EXPERTISE
-                            </span>
+                            </span> */}
 
                             <h2>
                                 Medical Specialities
@@ -340,9 +340,9 @@ const AreaOfCare = () => {
                         </div>
 
                         <div>
-                            <span className="area-section-label">
+                            {/* <span className="area-section-label">
                                 OUTPATIENT CARE
-                            </span>
+                            </span> */}
 
                             <h2>Outpatient Department</h2>
                         </div>
@@ -388,10 +388,10 @@ const AreaOfCare = () => {
                         </div>
 
                         <div>
-
+{/* 
                             <span className="area-section-label">
                                 DIAGNOSTICS
-                            </span>
+                            </span> */}
 
                             <h2>
                                 Diagnostic & Clinical Services
@@ -467,9 +467,9 @@ const AreaOfCare = () => {
 
                         <div>
 
-                            <span className="area-section-label">
+                            {/* <span className="area-section-label">
                                 CRITICAL CARE
-                            </span>
+                            </span> */}
 
                             <h2>
                                 Emergency & Critical Care

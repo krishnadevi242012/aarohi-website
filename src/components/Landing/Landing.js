@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import { departments as doctorDepartments } from "../Doctors/Doctors";
 import axios from "axios";
 import { Button, Form, Modal } from "react-bootstrap";
 
@@ -13,6 +14,9 @@ const Landing = () => {
     const [activeButton, setactiveButton] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [areaCareSlide, setAreaCareSlide] = useState(0);
+    const [areaCareVisibleCount, setAreaCareVisibleCount] = useState(4);
+    const [doctorSlide, setDoctorSlide] = useState(0);
+    const [doctorVisibleCount, setDoctorVisibleCount] = useState(4);
     const [feedbackSlide, setFeedbackSlide] = useState(0);
     const [feedbackPosition, setFeedbackPosition] = useState(1);
     const [feedbackTransition, setFeedbackTransition] = useState(true);
@@ -25,14 +29,31 @@ const Landing = () => {
         return () => clearInterval(interval);
     }, []);
     useEffect(() => {
-        const areaCareInterval = setInterval(() => {
-            setAreaCareSlide((prev) =>
-                (prev + 1) % areaCareDepartments.length
-            );
-        }, 4500);
+        const updateDoctorVisibleCount = () => {
+            if (window.innerWidth <= 768) {
+                setDoctorVisibleCount(1);
+            } else if (window.innerWidth <= 991) {
+                setDoctorVisibleCount(2);
+            } else {
+                setDoctorVisibleCount(4);
+            }
+        };
 
-        return () => clearInterval(areaCareInterval);
+        updateDoctorVisibleCount();
+
+        window.addEventListener("resize", updateDoctorVisibleCount);
+
+        return () => {
+            window.removeEventListener("resize", updateDoctorVisibleCount);
+        };
     }, []);
+
+    const allDoctors = doctorDepartments.flatMap((department) =>
+        department.doctors.map((doctor) => ({
+            ...doctor,
+            department: department.name,
+        }))
+    );
 
     const areaCareDepartments = [
         {
@@ -142,6 +163,26 @@ const Landing = () => {
         }
     ];
 
+    useEffect(() => {
+        const updateVisibleCount = () => {
+            if (window.innerWidth <= 768) {
+                setAreaCareVisibleCount(1);
+            } else if (window.innerWidth <= 991) {
+                setAreaCareVisibleCount(2);
+            } else {
+                setAreaCareVisibleCount(4);
+            }
+        };
+
+        updateVisibleCount();
+
+        window.addEventListener("resize", updateVisibleCount);
+
+        return () => {
+            window.removeEventListener("resize", updateVisibleCount);
+        };
+    }, []);
+
     const feedbacks = [
         {
             name: "Ushashree K",
@@ -171,58 +212,12 @@ const Landing = () => {
     ];
 
     const feedbackItems = [
-    feedbacks[feedbacks.length - 1],
-    ...feedbacks,
-    feedbacks[0]
-];
+        feedbacks[feedbacks.length - 1],
+        ...feedbacks,
+        feedbacks[0]
+    ];
 
-const nextFeedback = () => {
-    setFeedbackTransition(true);
-
-    setFeedbackPosition((prev) => prev + 1);
-
-    setFeedbackSlide(
-        (prev) => (prev + 1) % feedbacks.length
-    );
-};
-
-const prevFeedback = () => {
-    setFeedbackTransition(true);
-
-    setFeedbackPosition((prev) => prev - 1);
-
-    setFeedbackSlide(
-        (prev) =>
-            (prev - 1 + feedbacks.length) %
-            feedbacks.length
-    );
-};
-
-const goToFeedback = (index) => {
-    setFeedbackTransition(true);
-
-    setFeedbackPosition(index + 1);
-
-    setFeedbackSlide(index);
-};
-
-const handleFeedbackTransitionEnd = () => {
-
-    if (feedbackPosition === feedbackItems.length - 1) {
-
-        setFeedbackTransition(false);
-        setFeedbackPosition(1);
-
-    } else if (feedbackPosition === 0) {
-
-        setFeedbackTransition(false);
-        setFeedbackPosition(feedbacks.length);
-    }
-};
-useEffect(() => {
-
-    const feedbackInterval = setInterval(() => {
-
+    const nextFeedback = () => {
         setFeedbackTransition(true);
 
         setFeedbackPosition((prev) => prev + 1);
@@ -230,12 +225,58 @@ useEffect(() => {
         setFeedbackSlide(
             (prev) => (prev + 1) % feedbacks.length
         );
+    };
 
-    }, 5000);
+    const prevFeedback = () => {
+        setFeedbackTransition(true);
 
-    return () => clearInterval(feedbackInterval);
+        setFeedbackPosition((prev) => prev - 1);
 
-}, []);
+        setFeedbackSlide(
+            (prev) =>
+                (prev - 1 + feedbacks.length) %
+                feedbacks.length
+        );
+    };
+
+    const goToFeedback = (index) => {
+        setFeedbackTransition(true);
+
+        setFeedbackPosition(index + 1);
+
+        setFeedbackSlide(index);
+    };
+
+    const handleFeedbackTransitionEnd = () => {
+
+        if (feedbackPosition === feedbackItems.length - 1) {
+
+            setFeedbackTransition(false);
+            setFeedbackPosition(1);
+
+        } else if (feedbackPosition === 0) {
+
+            setFeedbackTransition(false);
+            setFeedbackPosition(feedbacks.length);
+        }
+    };
+    useEffect(() => {
+
+        const feedbackInterval = setInterval(() => {
+
+            setFeedbackTransition(true);
+
+            setFeedbackPosition((prev) => prev + 1);
+
+            setFeedbackSlide(
+                (prev) => (prev + 1) % feedbacks.length
+            );
+
+        }, 5000);
+
+        return () => clearInterval(feedbackInterval);
+
+    }, []);
     const handleClose = () => {
         setShowModal(false);
     }
@@ -375,14 +416,6 @@ useEffect(() => {
                                                     healthcare professionals.
                                                 </p>
 
-                                                {/* <Link
-                                                    to="/technology"
-                                                    target="_blank"
-                                                    className="btn btn-primary btn-blue"
-                                                >
-                                                    View Our Services
-                                                </Link> */}
-
                                             </div>
 
                                         </div>
@@ -436,7 +469,7 @@ useEffect(() => {
                     <div className="facilities-heading">
 
                         <h2>
-                            World-Class <span>Facilities</span>
+                            Facilities
                         </h2>
 
                         <p>
@@ -621,8 +654,140 @@ useEffect(() => {
             </section>
 
 
+            {/* ================= OUR DOCTORS ================= */}
+
+            <section className="landing-doctors">
+                <div className="container">
+
+                    <div className="landing-doctors-header">
+                        <span className="landing-doctors-label">
+                            OUR DOCTORS
+                        </span>
+
+                        <h2>
+                            Meet Our <span>Medical Experts</span>
+                        </h2>
+
+                        <p>
+                            Experienced specialists dedicated to providing
+                            personalised care across a wide range of medical
+                            and surgical specialities.
+                        </p>
+                    </div>
+
+                    <div className="landing-doctors-slider">
+
+                        {/* PREVIOUS */}
+                        <button
+                            type="button"
+                            className="doctor-arrow doctor-prev"
+                            onClick={() =>
+                                setDoctorSlide((prev) =>
+                                    Math.max(0, prev - 1)
+                                )
+                            }
+                            disabled={doctorSlide === 0}
+                            aria-label="Previous doctor"
+                        >
+                            ‹
+                        </button>
+
+                        <div className="doctor-slide-window">
+
+                            <div
+                                className="doctor-slide-track"
+                                style={{
+                                    "--doctor-count": allDoctors.length,
+                                    "--doctor-visible-count": doctorVisibleCount,
+                                    transform: `translateX(-${doctorSlide *
+                                        (100 / allDoctors.length)
+                                        }%)`
+                                }}
+                            >
+
+                                {allDoctors.map((doctor) => (
+                                    <div
+                                        className="doctor-slide"
+                                        key={doctor.name}
+                                    >
+
+                                        <article className="landing-doctor-card">
+
+                                            <div className="landing-doctor-content">
+
+                                                <span className="landing-doctor-department">
+                                                    {doctor.department}
+                                                </span>
+
+                                                <h3>
+                                                    {doctor.name}
+                                                </h3>
+
+                                                <p className="landing-doctor-role">
+                                                    {doctor.role}
+                                                </p>
+
+                                                <div className="landing-doctor-qualification">
+                                                    {doctor.qualification}
+                                                </div>
+
+                                                {doctor.experience && (
+                                                    <div className="landing-doctor-experience">
+                                                        <i className="mdi mdi-briefcase-outline"></i>
+                                                        {doctor.experience}
+                                                    </div>
+                                                )}
+
+                                            </div>
+
+                                        </article>
+
+                                    </div>
+                                ))}
+
+                            </div>
+
+                        </div>
+
+                        {/* NEXT */}
+                        <button
+                            type="button"
+                            className="doctor-arrow doctor-next"
+                            onClick={() =>
+                                setDoctorSlide((prev) =>
+                                    Math.min(
+                                        allDoctors.length -
+                                        doctorVisibleCount,
+                                        prev + 1
+                                    )
+                                )
+                            }
+                            disabled={
+                                doctorSlide >=
+                                allDoctors.length -
+                                doctorVisibleCount
+                            }
+                            aria-label="Next doctor"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+                    <div className="landing-doctors-button">
+                        <Link
+                            to="/doctors"
+                            className="view-all-doctors-btn"
+                        >
+                            View All Doctors <span>→</span>
+                        </Link>
+                    </div>
+
+                </div>
+            </section>
+
             {/* =========================================================
-    AREAS OF CARE
+    OUR SPECIALITIES
 ========================================================= */}
 
             <section className="landing-area-care">
@@ -634,7 +799,7 @@ useEffect(() => {
                     <div className="landing-area-care-header">
 
                         <span className="landing-area-care-label">
-                            OUR AREAS OF CARE
+                            OUR SPECIALITIES
                         </span>
 
                         <h2>
@@ -652,34 +817,43 @@ useEffect(() => {
 
                     {/* SLIDER */}
 
+                    {/* =================================================
+    SPECIALITIES SLIDER
+================================================= */}
+
                     <div className="landing-area-care-slider">
 
+                        {/* PREVIOUS */}
                         <button
                             type="button"
                             className="area-care-arrow area-care-prev"
                             onClick={() =>
-                                setAreaCareSlide(
-                                    (prev) =>
-                                        (prev - 1 + areaCareDepartments.length) %
-                                        areaCareDepartments.length
+                                setAreaCareSlide((prev) =>
+                                    Math.max(0, prev - 1)
                                 )
                             }
-                            aria-label="Previous department"
+                            disabled={areaCareSlide === 0}
+                            aria-label="Previous speciality"
                         >
                             ‹
                         </button>
 
 
+                        {/* WINDOW */}
                         <div className="area-care-slide-window">
 
                             <div
                                 className="area-care-slide-track"
                                 style={{
-                                    transform: `translateX(-${areaCareSlide * 100}%)`
+                                    "--speciality-count": areaCareDepartments.length,
+                                    "--visible-count": areaCareVisibleCount,
+                                    transform: `translateX(-${areaCareSlide *
+                                        (100 / areaCareDepartments.length)
+                                        }%)`
                                 }}
                             >
 
-                                {areaCareDepartments.map((department, index) => (
+                                {areaCareDepartments.map((department) => (
 
                                     <div
                                         className="area-care-slide"
@@ -703,10 +877,6 @@ useEffect(() => {
 
                                             <div className="landing-department-content">
 
-                                                <span className="landing-department-label">
-
-                                                </span>
-
                                                 <h3>
                                                     {department.name}
                                                 </h3>
@@ -728,41 +898,28 @@ useEffect(() => {
                         </div>
 
 
+                        {/* NEXT */}
                         <button
                             type="button"
                             className="area-care-arrow area-care-next"
                             onClick={() =>
-                                setAreaCareSlide(
-                                    (prev) =>
-                                        (prev + 1) %
-                                        areaCareDepartments.length
+                                setAreaCareSlide((prev) =>
+                                    Math.min(
+                                        areaCareDepartments.length -
+                                        areaCareVisibleCount,
+                                        prev + 1
+                                    )
                                 )
                             }
-                            aria-label="Next department"
+                            disabled={
+                                areaCareSlide >=
+                                areaCareDepartments.length -
+                                areaCareVisibleCount
+                            }
+                            aria-label="Next speciality"
                         >
                             ›
                         </button>
-
-                    </div>
-
-
-                    {/* DOTS */}
-
-                    <div className="landing-area-care-dots">
-
-                        {areaCareDepartments.map((department, index) => (
-
-                            <button
-                                key={department.path}
-                                type="button"
-                                className={
-                                    areaCareSlide === index ? "active" : ""
-                                }
-                                onClick={() => setAreaCareSlide(index)}
-                                aria-label={`Go to ${department.name}`}
-                            />
-
-                        ))}
 
                     </div>
 
@@ -790,7 +947,7 @@ useEffect(() => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 pb-30">
                             <div className="about-section-item about-item-image text-center">
-                                <img src="images/landing/image-7.jpg" className="shadow-2xl" alt="shape" />
+                                <img src="images/landing/appointment.png" className="shadow-2xl" alt="shape" />
                             </div>
                         </div>
                         <div className="col-lg-6 pb-30">
@@ -813,134 +970,132 @@ useEffect(() => {
     FEEDBACK / TESTIMONIALS
 ========================================================= */}
 
-<section className="feedback-section">
+            <section className="feedback-section">
 
-    <div className="container">
+                <div className="container">
 
-        {/* HEADER */}
+                    {/* HEADER */}
 
-        <div className="feedback-header">
-            <h2>FEEDBACKS</h2>
-        </div>
-
-
-        {/* CAROUSEL */}
-
-        <div className="feedback-carousel">
-
-            {/* PREVIOUS */}
-
-            <button
-                type="button"
-                className="feedback-arrow feedback-prev"
-                onClick={prevFeedback}
-                aria-label="Previous feedback"
-            >
-                ‹
-            </button>
+                    <div className="feedback-header">
+                        <h2>FEEDBACKS</h2>
+                    </div>
 
 
-            {/* VIEWPORT */}
+                    {/* CAROUSEL */}
 
-            <div className="feedback-window">
+                    <div className="feedback-carousel">
 
-                <div
-                    className="feedback-track"
-                    onTransitionEnd={handleFeedbackTransitionEnd}
-                    style={{
-                        "--feedback-position": feedbackPosition,
-                        "--feedback-slide-width":
-                            `${100 / feedbackItems.length}%`,
-                        "--feedback-track-width":
-                            `${(feedbackItems.length / 3) * 100}%`,
-                        "--feedback-mobile-track-width":
-                            `${feedbackItems.length * 100}%`,
-                        transition: feedbackTransition
-                            ? "transform 0.6s ease-in-out"
-                            : "none",
-                        transform:
-                            `translateX(-${
-                                (feedbackPosition - 1) *
-                                (100 / feedbackItems.length)
-                            }%)`
-                    }}
-                >
+                        {/* PREVIOUS */}
 
-                    {feedbackItems.map((feedback, index) => (
-
-                        <div
-                            className={`feedback-slide ${
-                                index === feedbackPosition
-                                    ? "active"
-                                    : ""
-                            }`}
-                            key={`${feedback.name}-${index}`}
+                        <button
+                            type="button"
+                            className="feedback-arrow feedback-prev"
+                            onClick={prevFeedback}
+                            aria-label="Previous feedback"
                         >
+                            ‹
+                        </button>
 
-                            <div className="feedback-card">
 
-                                <h3>
-                                    {feedback.name}
-                                </h3>
+                        {/* VIEWPORT */}
 
-                                <span className="feedback-source">
-                                    Google Review
-                                </span>
+                        <div className="feedback-window">
 
-                                <p>
-                                    {feedback.review}
-                                </p>
+                            <div
+                                className="feedback-track"
+                                onTransitionEnd={handleFeedbackTransitionEnd}
+                                style={{
+                                    "--feedback-position": feedbackPosition,
+                                    "--feedback-slide-width":
+                                        `${100 / feedbackItems.length}%`,
+                                    "--feedback-track-width":
+                                        `${(feedbackItems.length / 3) * 100}%`,
+                                    "--feedback-mobile-track-width":
+                                        `${feedbackItems.length * 100}%`,
+                                    transition: feedbackTransition
+                                        ? "transform 0.6s ease-in-out"
+                                        : "none",
+                                    transform:
+                                        `translateX(-${(feedbackPosition - 1) *
+                                        (100 / feedbackItems.length)
+                                        }%)`
+                                }}
+                            >
+
+                                {feedbackItems.map((feedback, index) => (
+
+                                    <div
+                                        className={`feedback-slide ${index === feedbackPosition
+                                            ? "active"
+                                            : ""
+                                            }`}
+                                        key={`${feedback.name}-${index}`}
+                                    >
+
+                                        <div className="feedback-card">
+
+                                            <h3>
+                                                {feedback.name}
+                                            </h3>
+
+                                            <span className="feedback-source">
+                                                Google Review
+                                            </span>
+
+                                            <p>
+                                                {feedback.review}
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                ))}
 
                             </div>
 
                         </div>
 
-                    ))}
+
+                        {/* NEXT */}
+
+                        <button
+                            type="button"
+                            className="feedback-arrow feedback-next"
+                            onClick={nextFeedback}
+                            aria-label="Next feedback"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+
+                    {/* DOTS */}
+
+                    <div className="feedback-dots">
+
+                        {feedbacks.map((feedback, index) => (
+
+                            <button
+                                key={feedback.name}
+                                type="button"
+                                className={
+                                    feedbackSlide === index
+                                        ? "active"
+                                        : ""
+                                }
+                                onClick={() => goToFeedback(index)}
+                                aria-label={`Go to feedback ${index + 1}`}
+                            />
+
+                        ))}
+
+                    </div>
 
                 </div>
 
-            </div>
-
-
-            {/* NEXT */}
-
-            <button
-                type="button"
-                className="feedback-arrow feedback-next"
-                onClick={nextFeedback}
-                aria-label="Next feedback"
-            >
-                ›
-            </button>
-
-        </div>
-
-
-        {/* DOTS */}
-
-        <div className="feedback-dots">
-
-            {feedbacks.map((feedback, index) => (
-
-                <button
-                    key={feedback.name}
-                    type="button"
-                    className={
-                        feedbackSlide === index
-                            ? "active"
-                            : ""
-                    }
-                    onClick={() => goToFeedback(index)}
-                    aria-label={`Go to feedback ${index + 1}`}
-                />
-
-            ))}
-
-        </div>
-
-    </div>
-
-</section>
+            </section>
 
         </section>
     );

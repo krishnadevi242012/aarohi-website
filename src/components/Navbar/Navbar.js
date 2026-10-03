@@ -34,7 +34,7 @@ const Navbar = () => {
 
                             <div>
                                 <span>EMERGENCY</span>
-                                <strong>+91 98765 43210</strong>
+                                <strong>+91 76250 62571</strong>
                             </div>
                         </a>
                         <a
@@ -47,7 +47,7 @@ const Navbar = () => {
 
                             <div>
                                 <span>BOOK APPOINTMENT</span>
-                                <strong>+91 88887 77666</strong>
+                                <strong>+91 74115 94222</strong>
                             </div>
                         </a>
 
@@ -84,7 +84,7 @@ const Navbar = () => {
 
                                 <div>
                                     EMERGENCY
-                                    <span>+91 98765 43210</span>
+                                    <span>+91 76250 62571</span>
                                 </div>
                             </a>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
 
                                 <div>
                                     BOOK APPOINTMENT
-                                    <span>+91 88887 77666</span>
+                                    <span>+91 74115 94222</span>
                                 </div>
                             </a>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
                                             to="/area-of-care"
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
-                                            AREA OF CARE
+                                            OUR SPECIALITIES
                                         </Link>
                                     </li>
                                     <li>
@@ -321,7 +321,7 @@ const Navbar = () => {
                                 to="/area-of-care"
                                 className="nav-link"
                             >
-                                AREA OF CARE
+                                OUR SPECIALITIES
                             </Link>
                         </li>
                         <li><Link to="/doctors">DOCTORS</Link></li>

@@ -3642,34 +3642,624 @@ body {
     border-radius: 20px;
 }
 
+/* =========================================
+   OUR DOCTORS SECTION
+   ========================================= */
 
-/* =========================
-   TRACK
-========================= */
+.landing-doctors {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.landing-doctors .container {
+    width: 100%;
+    max-width: none;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.landing-doctors-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 45px;
+}
+
+.landing-doctors-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #f36c21;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.landing-doctors-header h2 {
+    margin: 0 0 15px;
+    color: #075d97;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.landing-doctors-header h2 span {
+    color: #f36c21;
+}
+
+.landing-doctors-header p {
+    margin: 0 auto;
+    color: #6d8495;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.landing-doctors-slider {
+    position: relative;
+    width: 100%;
+}
+
+.doctor-slide-window {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.doctor-slide-track {
+    display: flex;
+
+    width: calc(
+        var(--doctor-count) *
+        (100% / var(--doctor-visible-count))
+    );
+
+    transition: transform 0.5s ease;
+}
+
+.doctor-slide {
+    flex: 0 0 calc(100% / var(--doctor-count));
+    width: calc(100% / var(--doctor-count));
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+/* =========================================
+   LANDING - DOCTOR CARDS
+   ========================================= */
+
+.landing-doctor-card {
+    position: relative;
+    min-height: 310px;
+    height: 100%;
+
+    padding: 38px 28px 32px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f8fbfd 100%
+    );
+
+    border: 1px solid #e1ebf1;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 72, 110, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Orange top accent */
+.landing-doctor-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    background: #f36c21;
+}
+
+
+/* Decorative soft circle */
+.landing-doctor-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -75px;
+    bottom: -75px;
+
+    border-radius: 50%;
+
+    background: rgba(7, 93, 151, 0.045);
+
+    pointer-events: none;
+}
+
+
+.landing-doctor-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #cddfe9;
+
+    box-shadow:
+        0 18px 40px rgba(0, 72, 110, 0.13);
+}
+
+
+/* Content */
+
+.landing-doctor-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+}
+
+
+/* Department */
+
+.landing-doctor-department {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    background: #fff1e8;
+
+    color: #f36c21;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    line-height: 1.3;
+}
+
+
+/* Doctor name */
+
+.landing-doctor-content h3 {
+    margin: 0 0 10px;
+
+    color: #075d97;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* Role */
+
+.landing-doctor-role {
+    min-height: 42px;
+
+    margin: 0 0 18px;
+
+    color: #46677b;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* Qualification */
+
+.landing-doctor-qualification {
+    padding-top: 16px;
+
+    border-top: 1px solid #e5edf2;
+
+    color: #748997;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+/* Experience */
+
+.landing-doctor-experience {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #eef7fc;
+
+    color: #075d97;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.landing-doctor-experience i {
+    font-size: 16px;
+}
+
+.landing-doctor-avatar {
+    width: 110px;
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f4f9fc;
+
+    border: 1px solid #dcecf5;
+
+    color: #075d97;
+
+    font-size: 58px;
+}
+
+.landing-doctor-content {
+    width: 100%;
+}
+
+.landing-doctor-department {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #f36c21;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+
+    line-height: 1.4;
+}
+
+.landing-doctor-content h3 {
+    margin: 0 0 8px;
+
+    color: #075d97;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.landing-doctor-role {
+    min-height: 42px;
+
+    margin: 0 0 12px;
+
+    color: #405f73;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+.landing-doctor-qualification {
+    min-height: 42px;
+
+    color: #718695;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.landing-doctor-experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 12px;
+
+    color: #075d97;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.landing-doctor-experience i {
+    font-size: 16px;
+}
+
+.landing-doctor-link {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #f36c21;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.doctor-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 5;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #075d97;
+    color: #ffffff;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(0, 72, 110, 0.18);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.doctor-prev {
+    left: -5px;
+}
+
+.doctor-next {
+    right: -5px;
+}
+
+.doctor-arrow:hover:not(:disabled) {
+    background: #f36c21;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.doctor-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.doctor-arrow:disabled:hover {
+    background: #075d97;
+    transform: translateY(-50%);
+}
+
+.landing-doctors-button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+.view-all-doctors-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 17px 30px;
+
+    border-radius: 35px;
+
+    background: #075d97;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.view-all-doctors-btn span {
+    font-size: 20px;
+}
+
+.view-all-doctors-btn:hover {
+    background: #f36c21;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+
+    .landing-doctors .container {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .landing-doctors-header h2 {
+        font-size: 34px;
+    }
+
+    .landing-doctor-card {
+        min-height: 370px;
+    }
+
+    .doctor-arrow {
+        width: 42px;
+        height: 42px;
+    }
+
+    .doctor-prev {
+        left: -10px;
+    }
+
+    .doctor-next {
+        right: -10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .landing-doctors {
+        padding: 65px 0;
+    }
+
+    .landing-doctors .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .landing-doctors-header {
+        margin-bottom: 30px;
+    }
+
+    .landing-doctors-header h2 {
+        font-size: 30px;
+    }
+
+    .landing-doctors-header p {
+        font-size: 15px;
+    }
+
+    .landing-doctor-card {
+        min-height: 300px;
+        padding: 32px 24px 28px;
+    }
+
+    .landing-doctor-content h3 {
+        font-size: 22px;
+    }
+
+    .landing-doctor-role {
+        font-size: 14px;
+    }
+
+    .landing-doctor-qualification {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SPECIALITIES SLIDER
+========================================================= */
+
+.area-care-slide-window {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
 
 .area-care-slide-track {
     display: flex;
 
-    width: 100%;
+    width: calc(
+        var(--speciality-count) *
+        (100% / var(--visible-count))
+    );
 
-    transition: transform 0.6s ease;
+    transition: transform 0.5s ease;
 }
 
-
-/* =========================
-   SLIDE
-========================= */
-
 .area-care-slide {
-    flex: 0 0 100%;
+    flex: 0 0 calc(
+        100% / var(--speciality-count)
+    );
 
-    width: 100%;
+    width: calc(
+        100% / var(--speciality-count)
+    );
 
     box-sizing: border-box;
 
-    padding: 5px 35px;
+    padding: 8px;
 }
 
+/* =========================================
+   SPECIALITIES - FULL WIDTH LAYOUT
+   ========================================= */
+
+.landing-area-care .container {
+    width: 100%;
+    max-width: none;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.landing-area-care-slider {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+.area-care-slide-window {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.area-care-slide-track {
+    display: flex;
+    width: calc(
+        var(--speciality-count) *
+        (100% / var(--visible-count))
+    );
+    transition: transform 0.5s ease;
+}
+
+.area-care-slide {
+    flex: 0 0 calc(100% / var(--speciality-count));
+    width: calc(100% / var(--speciality-count));
+    box-sizing: border-box;
+    padding: 8px;
+}
 
 /* =========================
    DEPARTMENT CARD
@@ -3678,32 +4268,49 @@ body {
 .landing-department-card {
     position: relative;
 
-    min-height: 230px;
+    min-height: 285px;
 
-    padding: 30px 70px;
+    padding: 30px 20px;
 
     box-sizing: border-box;
 
     display: flex;
+    flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
-    gap: 65px;
+    text-align: center;
+
+    gap: 18px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0, 72, 110, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 .landing-department-card::before {
     content: "";
 
     position: absolute;
 
-    left: 0;
     top: 0;
-    bottom: 0;
+    left: 0;
+    right: 0;
 
-    width: 7px;
+    height: 5px;
 
     background: #f36c21;
+
+    border-radius: 16px 16px 0 0;
 }
 
 .landing-department-card:hover {
@@ -3715,7 +4322,6 @@ body {
         0 18px 42px rgba(0, 72, 110, 0.13);
 }
 
-
 /* =========================
    ICON
 ========================= */
@@ -3723,10 +4329,10 @@ body {
 .landing-department-icon {
     position: relative;
 
-    width: 175px;
-    height: 175px;
+    width: 120px;
+    height: 120px;
 
-    flex: 0 0 175px;
+    flex: 0 0 120px;
 
     display: flex;
 
@@ -3749,8 +4355,8 @@ body {
 
     position: absolute;
 
-    width: 135px;
-    height: 135px;
+    width: 95px;
+    height: 95px;
 
     border: 1px solid #ffd8c4;
 
@@ -3762,47 +4368,28 @@ body {
 
     z-index: 2;
 
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
 
     object-fit: contain;
 }
-
 
 /* =========================
    CONTENT
 ========================= */
 
 .landing-department-content {
-    position: relative;
-
-    flex: 1;
-}
-
-.landing-department-label {
-    display: block;
-
-    margin-bottom: 10px;
-
-    color: #f36c21;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
+    width: 100%;
 }
 
 .landing-department-content h3 {
     margin: 0;
 
-    max-width: 600px;
-
     color: #075d97;
 
-    font-size: 32px;
+    font-size: 20px;
 
-    line-height: 1.25;
+    line-height: 1.3;
 
     font-weight: 700;
 }
@@ -3810,11 +4397,11 @@ body {
 .landing-department-arrow {
     display: inline-block;
 
-    margin-top: 25px;
+    margin-top: 15px;
 
     color: #f36c21;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 700;
 }
@@ -3872,7 +4459,16 @@ body {
 .area-care-next {
     right: -5px;
 }
+.area-care-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+}
 
+.area-care-arrow:disabled:hover {
+    background: #075d97;
+    transform: none;
+}
 
 /* =========================
    DOTS
@@ -3993,29 +4589,24 @@ body {
     }
 
     .landing-department-card {
-        min-height: 260px;
-
-        padding: 35px 45px;
-
-        gap: 35px;
+        min-height: 270px;
+        padding: 25px 15px;
     }
 
     .landing-department-icon {
-        width: 145px;
-        height: 145px;
-
-        flex-basis: 145px;
+        width: 120px;
+        height: 120px;
+        flex-basis: 120px;
     }
 
     .landing-department-icon img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .landing-department-content h3 {
-        font-size: 27px;
+        font-size: 21px;
     }
-
 }
 
 
@@ -4039,47 +4630,28 @@ body {
 
     .landing-area-care-header p {
         font-size: 14px;
-
         line-height: 1.6;
     }
 
-
     .landing-area-care-slider {
-        display: block;
+        display: flex;
     }
 
     .area-care-slide {
-        padding: 5px 0;
+        padding: 5px 10px;
     }
-
 
     .landing-department-card {
         min-height: 300px;
 
         padding: 30px 25px;
 
-        flex-direction: column;
-
-        justify-content: center;
-
-        text-align: center;
-
         gap: 20px;
     }
-
-    .landing-department-card::before {
-        width: 100%;
-        height: 5px;
-
-        top: 0;
-        bottom: auto;
-    }
-
 
     .landing-department-icon {
         width: 135px;
         height: 135px;
-
         flex-basis: 135px;
     }
 
@@ -4088,32 +4660,14 @@ body {
         height: 95px;
     }
 
-
-    .landing-department-content {
-        width: 100%;
-    }
-
-    .landing-department-label {
-        margin-bottom: 7px;
-    }
-
     .landing-department-content h3 {
         font-size: 24px;
-
         line-height: 1.3;
     }
-
-    .landing-department-arrow {
-        margin-top: 15px;
-
-        font-size: 13px;
-    }
-
 
     .area-care-arrow {
         width: 36px;
         height: 36px;
-
         font-size: 25px;
     }
 
@@ -4124,62 +4678,6 @@ body {
     .area-care-next {
         right: 3px;
     }
-
-
-    .landing-area-care-dots {
-        margin-top: 20px;
-
-        gap: 5px;
-    }
-
-    .landing-area-care-dots button {
-        width: 6px;
-        height: 6px;
-    }
-
-    .landing-area-care-dots button.active {
-        width: 18px;
-    }
-
-    .landing-area-care-button {
-        margin-top: 25px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .landing-area-care-header h2 {
-        font-size: 27px;
-    }
-
-    .landing-department-card {
-        min-height: 285px;
-
-        padding: 25px 20px;
-    }
-
-    .landing-department-icon {
-        width: 120px;
-        height: 120px;
-
-        flex-basis: 120px;
-    }
-
-    .landing-department-icon img {
-        width: 85px;
-        height: 85px;
-    }
-
-    .landing-department-content h3 {
-        font-size: 21px;
-    }
-
 }
 
 /* =========================================================
@@ -5478,5 +5976,396 @@ body {
         min-width: 38px;
 
         font-size: 19px;
+    }
+}
+
+/* =================================================
+   FOOTER EMAIL
+================================================= */
+
+.footer-email-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 18px;
+}
+
+.footer-email-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0e5;
+    border-radius: 14px;
+    color: #ff7617;
+    font-size: 22px;
+}
+
+.footer-email-box p {
+    margin: 0;
+    color: #3f5d75;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .footer-email-box {
+        gap: 15px;
+        margin-top: 18px;
+    }
+
+    .footer-email-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 19px;
+    }
+
+    .footer-email-box p {
+        font-size: 14px;
+        white-space: normal;
+    }
+}
+
+/* =========================================================
+   FINAL iPHONE / MOBILE FIX
+   FACILITIES + FOOTER
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /* =====================================================
+       FACILITIES - MOBILE
+    ===================================================== */
+
+    .hospital-facilities-section {
+        width: 100%;
+        max-width: 100%;
+        padding: 40px 15px 55px !important;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .hospital-facilities-section .facilities-cards-row {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        gap: 20px !important;
+
+        box-sizing: border-box;
+    }
+
+    .hospital-facilities-section .facility-column {
+        width: 100% !important;
+        max-width: 330px !important;
+
+        flex: 0 0 auto !important;
+
+        box-sizing: border-box;
+    }
+
+    .hospital-facilities-section .facility-card {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 390px !important;
+
+        padding: 24px 20px 35px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    /* Image */
+    .hospital-facilities-section .facility-image {
+        width: 100% !important;
+        height: 155px !important;
+
+        flex: 0 0 155px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+    }
+
+    .hospital-facilities-section .facility-image-circle {
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .hospital-facilities-section .facility-image-circle img {
+        width: 115px !important;
+        height: 115px !important;
+
+        object-fit: contain !important;
+    }
+
+    /* Decorative elements */
+    .hospital-facilities-section .facility-plus {
+        font-size: 22px !important;
+    }
+
+    .hospital-facilities-section .facility-circle-outline {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .hospital-facilities-section .facility-dot {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    /* Title */
+    .hospital-facilities-section .facility-card h3 {
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        margin: 5px 0 8px !important;
+
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+
+        text-align: center !important;
+
+        display: block !important;
+    }
+
+    /* Divider */
+    .hospital-facilities-section .facility-small-divider {
+        margin: 3px auto 12px !important;
+    }
+
+    /* Description */
+    .hospital-facilities-section .facility-card p {
+        width: 100% !important;
+        max-width: 275px !important;
+
+        margin: 0 auto !important;
+
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+
+        text-align: center !important;
+    }
+
+    /* Hide decorative background dots on iPhone */
+    .hospital-facilities-section .facility-background-dots {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       FOOTER - MOBILE WIDTH SAFETY
+    ===================================================== */
+
+    .aarohi-footer {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box;
+    }
+
+    .aarohi-footer .footer-main {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box;
+    }
+
+    .aarohi-footer .footer-main .container,
+    .aarohi-footer .footer-bottom .container {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+    .aarohi-footer .footer-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        box-sizing: border-box;
+    }
+
+    .aarohi-footer .footer-column {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        box-sizing: border-box;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+
+    /* Footer logo */
+    .aarohi-footer .footer-logo {
+        width: 210px !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+
+    /* Footer description */
+    .aarohi-footer .footer-brand-text {
+        width: 100% !important;
+        max-width: 320px !important;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    /* Address */
+    .aarohi-footer .footer-address-box {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        align-items: flex-start !important;
+
+        gap: 12px !important;
+
+        box-sizing: border-box;
+    }
+
+    .aarohi-footer .footer-address-box p {
+        min-width: 0 !important;
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+
+    /* Email */
+    .aarohi-footer .footer-email-box {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 12px !important;
+
+        box-sizing: border-box;
+    }
+
+    .aarohi-footer .footer-email-icon {
+        flex: 0 0 42px !important;
+
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+    }
+
+    .aarohi-footer .footer-email-box p {
+        min-width: 0 !important;
+        width: auto !important;
+
+        margin: 0 !important;
+
+        font-size: 13px !important;
+        line-height: 1.45 !important;
+
+        white-space: normal !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+
+    /* Footer bottom */
+    .aarohi-footer .footer-bottom-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        overflow: hidden;
+    }
+
+    .aarohi-footer .footer-bottom p,
+    .aarohi-footer .footer-bottom span {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL iPHONE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .hospital-facilities-section {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .hospital-facilities-section .facility-column {
+        max-width: 100% !important;
+    }
+
+    .hospital-facilities-section .facility-card {
+        min-height: 380px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .aarohi-footer .footer-main .container,
+    .aarohi-footer .footer-bottom .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .aarohi-footer .footer-logo {
+        width: 200px !important;
     }
 }
