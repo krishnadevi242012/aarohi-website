@@ -273,7 +273,7 @@ const AreaOfCare = () => {
                             </span> */}
 
                             <h2>
-                                Medical Specialities
+                                Specialities
                             </h2>
 
                         </div>
