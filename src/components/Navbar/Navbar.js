@@ -27,18 +27,18 @@ const Navbar = () => {
                     <div className="nav-contact d-none d-md-flex align-items-center gap-3">
 
                         <a
-                            href="tel:+919876543210"
+                            href="tel:+91 76250 62567"
                             className="contact-badge emergency-badge"
                         >
                             <i className="mdi mdi-phone"></i>
 
                             <div>
                                 <span>EMERGENCY</span>
-                                <strong>+91 76250 62571</strong>
+                                <strong>+91 76250 62567</strong>
                             </div>
                         </a>
                         <a
-                            href="https://wa.me/918888777666"
+                            href="https://wa.me/917411594222"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="contact-badge appointment-badge"
@@ -79,16 +79,16 @@ const Navbar = () => {
                         {/* Action Buttons */}
                         <div className="mobile-action-buttons">
 
-                            <a href="tel:+919876543210" className="mobile-emergency-btn">
+                            <a href="tel:+91 76250 62567" className="mobile-emergency-btn">
                                 <i className="mdi mdi-phone"></i>
 
                                 <div>
                                     EMERGENCY
-                                    <span>+91 76250 62571</span>
+                                    <span>+91 76250 62567</span>
                                 </div>
                             </a>
 
-                            <a href="https://wa.me/918888777666" className="mobile-book-btn">
+                            <a href="https://wa.me/917411594222" className="mobile-book-btn">
                                 <i className="mdi mdi-calendar-check"></i>
 
                                 <div>

@@ -479,11 +479,11 @@ const Landing = () => {
 
                     </div>
 
-                    <div className="facilities-divider">
+                    {/* <div className="facilities-divider">
                         <span></span>
                         <b></b>
                         <span></span>
-                    </div>
+                    </div> */}
 
 
                     {/* =========================
@@ -497,7 +497,7 @@ const Landing = () => {
                 CARD 1
             ========================= */}
 
-                        <div className="facility-column">
+                        {/* <div className="facility-column">
 
                             <div
                                 className="facility-card"
@@ -542,7 +542,7 @@ const Landing = () => {
 
                             </div>
 
-                        </div>
+                        </div> */}
 
 
                         {/* =========================

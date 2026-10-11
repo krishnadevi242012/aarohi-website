@@ -32,10 +32,6 @@ const Footer = () => {
                                 />
                             </Link>
 
-                            <p className="footer-tagline">
-                                For better health...
-                            </p>
-
                             <p className="footer-brand-text">
                                 Quality healthcare with compassionate care,
                                 experienced doctors and modern medical
